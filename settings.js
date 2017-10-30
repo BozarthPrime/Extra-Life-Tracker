@@ -6,6 +6,6 @@ var settings = {
     fontColor: "#000",
     boarderColor: "#000",
     backgroundColor: "",
-    opacity: 0.25,
+    opacity: 1,
     logWhenUpdating: false
 };
