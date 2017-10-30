@@ -6,7 +6,7 @@ This is a web page that can be used as a web source in streaming software such a
 ## Setup
 
 ### Configuration
-Open extra-life-tracker.html in a text editor and at the top of the script tag you will see an object called `settings`. To change your settings you just need to update this object.
+Open settings.js in a text editor and you will see an object called `settings`. To change your settings you just need to update this object.
 
 - participantIds: An array of Extra Life participant IDs (you can obtain this by going to your Extra Life page and looking at the URL. The end of it will say `participantID=` followed by your participant ID). You can have as many here as you like. Wrap them in quotes as the app treats them as strings.
 - displayCount: How many of the specified participants to display at a time. If you have many participants you would like to display but do not want to use up all the room to display them all at once you can set this to a smaller number, say two or three, and it will cycle through displaying the set amount at a time.
