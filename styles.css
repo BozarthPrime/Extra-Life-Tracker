@@ -1,0 +1,78 @@
+@font-face {
+    font-family: Furore;
+    src: url(Furore.otf);
+}
+
+html {
+    font-family: Furore;
+    font-size: 1em;
+}
+
+body {
+}
+
+#tracking-container {
+    width: 260px;
+    border: 2px solid;
+    border-radius: 6px;
+    position: relative;
+    height: 140px;
+}
+
+#participant-trackers {
+    display: block;
+    position: relative;
+    top: 30px;
+    width: 100%;
+}
+
+.participant-tracker-container {
+    display: inline-block;
+    position: relative;
+    font-size: 1.6em;
+    width: 100%;
+    height: 55px;
+
+}
+
+.participant-tracker-container .name {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 5px;
+    font-size: 0.5em;
+}
+
+.participant-tracker-container .raised {
+    display: block;
+    position: absolute;
+    text-align: right;
+    width: 100%;
+    right: 5px;
+    top: 20%;
+}
+
+#tracking-team {
+    display: inline-block;
+    position: absolute;
+    font-size: 0.75em;
+    top: 0px;
+    right: 0px;
+    padding: 2px;
+    height: 15px;
+    border-bottom-left-radius: 5px;
+    border-left: 1px solid;
+    border-bottom: 1px solid;
+}
+
+#tracking-team .name {
+    display: inline-block;
+}
+
+#tracking-team .raised {
+    display: inline-block;
+}
+
+#tracking-team .goal {
+    display: inline-block;
+}
