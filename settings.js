@@ -1,7 +1,7 @@
 var settings = {
-    participantIds: ["270140"],
+    participantIds: ["<your participant ID>"],
     displayCount: 1,
-    teamId: "34065",
+    teamId: "<your team ID>",
     refreshTimeMS: 10000,
     fontColor: "#000",
     boarderColor: "#000",
