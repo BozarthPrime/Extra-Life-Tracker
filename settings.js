@@ -1,11 +1,11 @@
 var settings = {
-    participantIds: ["270140"],
+    participantIds: ["<your participantID"],
     displayCount: 1,
-    teamId: "34065",
+    teamId: "<your teamID>",
     refreshTimeMS: 10000,
-    fontColor: "#000",
-    boarderColor: "#000",
-    backgroundColor: "",
-    opacity: 0.25,
+    fontColor: "#FFFFFF",
+    borderColor: "#FFFFFF",
+    backgroundColor: "#1A4C6D",
+    opacity: 1,
     logWhenUpdating: false
 };

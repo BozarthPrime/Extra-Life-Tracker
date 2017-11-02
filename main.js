@@ -19,12 +19,17 @@ function setup() {
         settings.displayCount = settings.participantIds.length;
     }
 
+    /* Use default values in undefined or empty except in the case of backgroundColor to allow transparent */
     $("#tracking-container").css({
         height: displayHight +'px',
-        color: settings.fontColor,
-        "border-color": settings.borderColor,
-        "background-color": settings.backgroundColor,
-        opacity: settings.opacity
+        color: isDefined(settings.fontColor) ? settings.fontColor : "#000000",
+        "border-color": isDefined(settings.borderColor) ? settings.borderColor : "#000000",
+        "background-color": settings.backgroundColor != undefined ? settings.backgroundColor : "",
+        opacity: isDefined(settings.opacity) ? settings.opacity : 1,
+    });
+
+    $("#tracking-team").css({
+        "border-color": isDefined(settings.borderColor) ? settings.borderColor : "#000000"
     });
 
     return;
@@ -111,6 +116,7 @@ function updateTeam() {
 
 function callAPI(data, callback) {
     data['format'] = 'json';
+    data['timestamp'] = new Date().getTime();
 
     $.ajax({
         type: 'GET',
@@ -139,4 +145,13 @@ function makeParticipantTracker(participantData) {
     raised.html("$" + participantData.totalRaisedAmount + "/$" + participantData.fundraisingGoal);
 
     return;
+}
+
+function isDefined(value) {
+    if (value != undefined && value != "") {
+        console.log(true);
+        return true;
+    }
+    console.log(false);
+    return false;
 }
