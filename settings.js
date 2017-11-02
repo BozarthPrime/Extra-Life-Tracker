@@ -1,5 +1,5 @@
 var settings = {
-    participantIds: ["<your participantID"],
+    participantIds: ["<your participantID>"],
     displayCount: 1,
     teamId: "<your teamID>",
     refreshTimeMS: 10000,
