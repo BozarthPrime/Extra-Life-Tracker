@@ -22,10 +22,8 @@ Copy settings.example.js to settings.js and open it in a text editor and you wil
 1. Add a new BrowserSource and give it a name (e.g. "Extra Life Tracker")
 2. Tick the Local File box
 3. Click the browse button next to the Local File line and select extra-life-tracker.html
-4. Set the width to 264
-5. Set the height with this formula: 4 + 30 if you are displaying a team + 55 x the number of participants you are displaying at a time
-    - Example 1: To display one participant and a team you would have 4 + 30 + (55 x 1) = 89
-    - Example 2: To display 3 participants with no team you would have 4 + (55 x 3) = 169
+4. Set the width to whatever your desired width is. The list will automatically adjust to the defined width.
+5. Set the height to something large like 500. The end height will be directly proportional to the `displayCount` you define within settings.js. Just make sure to set the height large enough to account for the number being displayed. For example, displaying a team along with 2 participants at a time, your minimum height needs to be 125.
 6. Click OK
 
 ## Credits
