@@ -6,14 +6,14 @@ This is a web page that can be used as a web source in streaming software such a
 ## Setup
 
 ### Configuration
-Open settings.js in a text editor and you will see an object called `settings`. To change your settings you just need to update this object.
+Copy settings.example.js to settings.js and open it in a text editor and you will see an object called `settings`. To change your settings you just need to update this object.
 
 - participantIds: An array of Extra Life participant IDs (you can obtain this by going to your Extra Life page and looking at the URL. The end of it will say `participantID=` followed by your participant ID). You can have as many here as you like. Wrap them in quotes as the app treats them as strings.
 - displayCount: How many of the specified participants to display at a time. If you have many participants you would like to display but do not want to use up all the room to display them all at once you can set this to a smaller number, say two or three, and it will cycle through displaying the set amount at a time.
 - teamId: The ID of your team (you can obtain this by going to your team page and looking at the URL. The end of it will say `teamID=` followed by your team ID). If set to an empty string the team tracker will be hidden.
 - refreshTimeMS: The interval to refresh the tracker at in MS. A reasonable default is 30000 (30 seconds).
 - fontColor: The hex of the font color you want to use.
-- boarderColor: The hex of the border color you want to use.
+- borderColor: The hex of the border color you want to use.
 - backgroundColor: The hex of the background color you want to use.
 - opacity: A number between 0 and 1 that is the opacity you want to use. The lower the setting the more transparent it will be.
 - logWhenUpdating: This is a debugging option that you can use if you are testing your settings in a normal browser. If this is true it will log when it is updating and the participant results of the update to the browser console.
