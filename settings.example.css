@@ -1,0 +1,19 @@
+#tracking-container {
+  background-color: #4074c2;
+  border-color: #ffffff;
+  color: #ffffff;
+  opacity: 1;
+}
+
+#tracking-team {
+  background-color: #1a4c6d;
+  border-color: #2a7fb8;
+}
+
+.participant-tracker-container {
+  border-bottom-color: #345e9e;
+}
+
+.participant-tracker-container + .participant-tracker-container {
+  border-top-color: #457dd1;
+}

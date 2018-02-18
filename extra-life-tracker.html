@@ -1,18 +1,17 @@
 <html>
     <head>
+        <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="settings.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://unpkg.com/currency.js@~1.0.0/dist/currency.min.js"></script>
         <script src="settings.js"></script>
         <script src="main.js"></script>
 
         <script>
             $(document).ready(function() {
                 /* Initial setup of the layout and such based on user settings */
-                setup();
-
-                /* Call update to do initial populate and then repeat at interval */
-                update();
-                setInterval(update, settings.refreshTimeMS);
+                ELT.start();
             });
         </script>
     </head>
@@ -20,8 +19,8 @@
     <body>
         <div id="tracking-container">
             <div id="tracking-team">
-                <div id="team-name" class="name"></div>:
-                $<div id="team-raised" class="raised"></div>/$<div id="team-goal" class="goal"></div>
+                <span id="team-name" class="name"></span>:
+                <span id="team-raised" class="raised"></span> / <span id="team-goal" class="goal"></span>
             </div>
 
             <div id="participant-trackers"></div>

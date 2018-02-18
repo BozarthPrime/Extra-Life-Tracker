@@ -6,26 +6,20 @@ This is a web page that can be used as a web source in streaming software such a
 ## Setup
 
 ### Configuration
-Open settings.js in a text editor and you will see an object called `settings`. To change your settings you just need to update this object.
+Rename settings.example.js to settings.js and settings.example.css to settings.css. These are the default settings and colors used by Extra Life Tracker. To change your settings you just need to update these files.
 
 - participantIds: An array of Extra Life participant IDs (you can obtain this by going to your Extra Life page and looking at the URL. The end of it will say `participantID=` followed by your participant ID). You can have as many here as you like. Wrap them in quotes as the app treats them as strings.
 - displayCount: How many of the specified participants to display at a time. If you have many participants you would like to display but do not want to use up all the room to display them all at once you can set this to a smaller number, say two or three, and it will cycle through displaying the set amount at a time.
 - teamId: The ID of your team (you can obtain this by going to your team page and looking at the URL. The end of it will say `teamID=` followed by your team ID). If set to an empty string the team tracker will be hidden.
 - refreshTimeMS: The interval to refresh the tracker at in MS. A reasonable default is 30000 (30 seconds).
-- fontColor: The hex of the font color you want to use.
-- boarderColor: The hex of the border color you want to use.
-- backgroundColor: The hex of the background color you want to use.
-- opacity: A number between 0 and 1 that is the opacity you want to use. The lower the setting the more transparent it will be.
 - logWhenUpdating: This is a debugging option that you can use if you are testing your settings in a normal browser. If this is true it will log when it is updating and the participant results of the update to the browser console.
 
 ### Setup in OBS
 1. Add a new BrowserSource and give it a name (e.g. "Extra Life Tracker")
 2. Tick the Local File box
 3. Click the browse button next to the Local File line and select extra-life-tracker.html
-4. Set the width to 264
-5. Set the height with this formula: 4 + 30 if you are displaying a team + 55 x the number of participants you are displaying at a time
-    - Example 1: To display one participant and a team you would have 4 + 30 + (55 x 1) = 89
-    - Example 2: To display 3 participants with no team you would have 4 + (55 x 3) = 169
+4. Set the width to whatever your desired width is. The list will automatically adjust to the defined width.
+5. Set the height to something large like 500. The end height will be directly proportional to the `displayCount` you define within settings.js. Just make sure to set the height large enough to account for the number being displayed. For example, displaying a team along with 2 participants at a time, your minimum height needs to be 125.
 6. Click OK
 
 ## Credits

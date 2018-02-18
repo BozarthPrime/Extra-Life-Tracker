@@ -1,78 +1,68 @@
-@font-face {
-    font-family: Furore;
-    src: url(Furore.otf);
-}
-
 html {
-    font-family: Furore;
-    font-size: 1em;
+    font-size: 1rem;
 }
 
 body {
+    font-family: "Helvetica Neue", helvetica, arial, sans-serif;
+    margin: 0;
 }
 
 #tracking-container {
-    width: 260px;
     border: 2px solid;
     border-radius: 6px;
     position: relative;
-    height: 140px;
 }
 
 #participant-trackers {
-    display: block;
-    position: relative;
-    top: 30px;
-    width: 100%;
 }
 
 .participant-tracker-container {
-    display: inline-block;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    overflow: hidden;
+    padding: 5px 8px;
     position: relative;
-    font-size: 1.6em;
-    width: 100%;
-    height: 55px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
 
+.participant-tracker-container:last-of-type {
+    border-bottom: none;
+}
+
+.participant-tracker-container + .participant-tracker-container {
+    border-top-style: solid;
+    border-top-width: 1px;
 }
 
 .participant-tracker-container .name {
-    display: block;
-    position: absolute;
-    top: 0px;
-    left: 5px;
-    font-size: 0.5em;
+    font-size: 0.9rem;
+    line-height: 0.9rem;
+    position: relative;
 }
 
 .participant-tracker-container .raised {
-    display: block;
-    position: absolute;
+    font-family: "Anton";
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    position: relative;
     text-align: right;
-    width: 100%;
-    right: 5px;
-    top: 20%;
+}
+
+.participant-tracker-container .raised-bar {
+    border-right-width: 1px;
+    border-right-style: solid;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
 }
 
 #tracking-team {
-    display: inline-block;
-    position: absolute;
-    font-size: 0.75em;
-    top: 0px;
-    right: 0px;
-    padding: 2px;
-    height: 15px;
-    border-bottom-left-radius: 5px;
-    border-left: 1px solid;
     border-bottom: 1px solid;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    font-size: 0.9rem;
+    padding: 4px;
+    text-align: center;
 }
 
-#tracking-team .name {
-    display: inline-block;
-}
-
-#tracking-team .raised {
-    display: inline-block;
-}
-
-#tracking-team .goal {
-    display: inline-block;
-}
