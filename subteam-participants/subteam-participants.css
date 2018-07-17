@@ -1,0 +1,40 @@
+#tracking-container {
+  background-color: #4074c2;
+  border-color: #3560a1;
+  color: #ffffff;
+  opacity: 1;
+}
+
+.participant-tracker-container {
+    border-bottom: solid 1px #3560a1;
+    overflow: hidden;
+    padding: 5px 8px;
+    position: relative;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+
+.participant-tracker-container:last-of-type {
+    border-bottom: none;
+}
+
+.participant-tracker-container + .participant-tracker-container {
+    border-top: solid 1px #4780d6;
+}
+
+.participant-tracker-container .raised {
+    text-align: right;
+}
+
+.participant-tracker-container .raised,
+.participant-tracker-container .name {
+  display: inline-block;
+  width: 50%;
+}
+
+.elt {
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  padding: 5px;
+  position: relative;
+  text-align: center;
+}

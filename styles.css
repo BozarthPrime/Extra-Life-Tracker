@@ -1,68 +1,13 @@
 html {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 body {
-    font-family: "Helvetica Neue", helvetica, arial, sans-serif;
-    margin: 0;
+  font-family: "Helvetica Neue", helvetica, arial, sans-serif;
+  margin: 0;
 }
 
 #tracking-container {
-    border: 2px solid;
-    border-radius: 6px;
-    position: relative;
+  border: 2px solid;
+  position: relative;
 }
-
-#participant-trackers {
-}
-
-.participant-tracker-container {
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-    overflow: hidden;
-    padding: 5px 8px;
-    position: relative;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
-}
-
-.participant-tracker-container:last-of-type {
-    border-bottom: none;
-}
-
-.participant-tracker-container + .participant-tracker-container {
-    border-top-style: solid;
-    border-top-width: 1px;
-}
-
-.participant-tracker-container .name {
-    font-size: 0.9rem;
-    line-height: 0.9rem;
-    position: relative;
-}
-
-.participant-tracker-container .raised {
-    font-family: "Anton";
-    font-size: 1.4rem;
-    line-height: 1.4rem;
-    position: relative;
-    text-align: right;
-}
-
-.participant-tracker-container .raised-bar {
-    border-right-width: 1px;
-    border-right-style: solid;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-}
-
-#tracking-team {
-    border-bottom: 1px solid;
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
-    font-size: 0.9rem;
-    padding: 4px;
-    text-align: center;
-}
-
