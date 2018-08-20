@@ -39,31 +39,19 @@
     let $timeValue = "";
 
     if ($duration.days() > 0) {
-      $timeValue += getTwoDigitNumber($duration.days()) + ":";
+      $timeValue += $duration.days().toString().padStart(2, "0") + ":";
     }
 
-    $timeValue += getTwoDigitNumber($duration.hours()) + ":";
-    $timeValue += getTwoDigitNumber($duration.minutes());
+    $timeValue += $duration.hours().toString().padStart(2, "0") + ":";
+    $timeValue += $duration.minutes().toString().padStart(2, "0");
 
     if (ELT.settings.displaySeconds) {
-      $timeValue += ":" + getTwoDigitNumber($duration.seconds());
+      $timeValue += ":" + $duration.seconds().toString().padStart(2, "0");
     }
     
     // Set values
     $header.html($headerValue);
     $time.html($timeValue);
-  }
-
-  /**********
-   * Helpers
-   **********/
-  
-  function getTwoDigitNumber(number) {
-    if (number > 9) {
-      return number;
-    } else {
-      return "0" + number;
-    }
   }
 
   start();
