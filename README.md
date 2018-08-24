@@ -17,6 +17,9 @@ Cycles through the fundraising amounts of a specified number of participants.
 ### [Team Goal](/team-goal)
 Displays amount raised and goal for the specified team.
 
+### [Countdown Timer](/countdown-timer)
+Displays the amount of time left in your event or the time left till your event starts if it is before the start of your event.
+
 ## Setup in OBS
 1. Add a new BrowserSource and give it a name (e.g. "Extra Life Tracker")
 2. Tick the Local File box
