@@ -10,4 +10,16 @@ body {
 #tracking-container {
 	border: 2px solid;
 	position: relative;
+	border-radius: 15px;
+	background-color: #4074c2;
+	border-color: #ffffff;
+	color: #ffffff;
+}
+
+.elt {
+	font-size: 1.4em;
+	line-height: 1.4em;
+	padding: 3px;
+	position: relative;
+	text-align: center;
 }

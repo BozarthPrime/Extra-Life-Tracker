@@ -1,19 +1,8 @@
-#countdown-timer {
-	background-color: #4074c2;
-	border-color: #ffffff;
-	color: #ffffff;
+#tracking-container {
 	opacity: 1;
 }
 
 #countdown-timer-time {
 	font-family: monospace;
-	font-size: 1.4rem;
-}
-
-.elt {
-	font-size: 1.2rem;
-	line-height: 1.2rem;
-	padding: 5px;
-	position: relative;
-	text-align: center;
+	font-size: 1.2em;
 }

@@ -1,32 +1,55 @@
 # ![Extra-Life-Tracker-Header](docs/images/Extra-Life-Traker-Header.png)
 
-## Overview
+# Overview
 Extra Life Tracker is a collection of web pages that can be used as a web source in streaming software such as OBS to display your and your team's current Extra Life fund raising status and goal.
 
-## Widgets
+# Widgets
 
-### [Last Donation](/last-donation)
-Displays the last donation for the specified participant.
-
-### [Participant Goal](/participant-goal)
-Displays amount raised and goal for the specified participant.
-
-### [Subteam Participants](/subteam-participants)
-Cycles through the fundraising amounts of a specified number of participants.
-
-### [Team Goal](/team-goal)
-Displays amount raised and goal for the specified team.
-
-### [Countdown Timer](/countdown-timer)
+## [Countdown Timer](/countdown-timer)
+## ![Countdonw-Timer-Preview](docs/images/Countdown-Timer-Preview.png)
 Displays the amount of time left in your event or the time left till your event starts if it is before the start of your event.
 
-## Setup in OBS
-1. Add a new BrowserSource and give it a name (e.g. "Extra Life Tracker")
+<hr />
+
+## [Last Donation](/last-donation)
+## ![Last-Donation-Preview](docs/images/Last-Donation-Preview.png)
+Displays the last donation for the specified participant.
+
+<hr />
+
+## [Participant Goal](/participant-goal)
+## ![Paticipant-Goal-Preview](docs/images/Participant-Goal-Preview.png)
+Displays amount raised and goal for the specified participant.
+
+<hr />
+
+## [Subteam Participants](/subteam-participants)
+## ![Subteam-Participants-Preview](docs/images/Subteam-Participants-Preview.png)
+Cycles through the fundraising amounts of a specified number of participants.
+
+<hr />
+
+## [Team Goal](/team-goal)
+## ![Team-Goal-Preview](docs/images/Team-Goal-Preview.png)
+Displays amount raised and goal for the specified team.
+
+# Configuration
+Each widget has a `[widget-name]-settings.js` file in its folder (e.x. `participant-goal-settings.js`), to set up the widget just update the values in there with the correct values you would like to use. There are full descriptions of the values in the settings files for each widget.
+
+# Setup in OBS
+1. Add a new BrowserSource and give it a name (e.x. "Extra Life Tracker - Team Goal")
 2. Tick the Local File box
-3. Click the browse button next to the Local File line and select extra-life-tracker.html
-4. Set the width to whatever your desired width is. The list will automatically adjust to the defined width.
-5. Set the height to something large like 500. The end height will be directly proportional to the `displayCount` you define within settings.js. Just make sure to set the height large enough to account for the number being displayed. For example, displaying a team along with 2 participants at a time, your minimum height needs to be 125.
+3. Click the browse button next to the Local File line and select the html file of the widget you want to add
+4. Set the width to whatever your desired width is (300 is a goo starting point). The list will automatically adjust to the defined width
+5. Set the height according the what widget you are adding
+	- Countdown Timer: 41
+	- Last Donation: 41
+	- Participant Goal: 41
+	- Subteam Participants: (30 * number of configured participants to display at a time) + 2
+	- Team Goal: 74
 6. Click OK
+7. Repeat for all widgets you wish to use
+
 
 ## License
 This program is free software: you can redistribute it and/or modify
