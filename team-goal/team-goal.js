@@ -1,27 +1,27 @@
 (function( $, ELT ){
-  /**********
-   * Main Functionality
-   **********/
+	/**********
+	 * Main Functionality
+	 **********/
 
-  /* Initial setup of the layout and theme based on user settings */
-  function start() {
-    update();
-    setInterval(update, ELT.settings.refreshTimeMS);
-  }
+	/* Initial setup of the layout and theme based on user settings */
+	function start() {
+		update();
+		setInterval(update, ELT.settings.refreshTimeMS);
+	}
 
-  /* Main loop */
-  function update() {
-    ELT.api.team({ teamID: ELT.settings.teamId }, onSuccess);
-  }
+	/* Main loop */
+	function update() {
+		ELT.api.team(ELT.settings.teamId, onSuccess);
+	}
 
-  function onSuccess(result) {
-    const $raised = $('#raised');
-    const $goal = $('#goal');
-    const $name = $('#name');
-    $name.html(`${result.name} Goal`);
-    $raised.html(ELT.toCurrency(result.totalRaisedAmount));
-    $goal.html(ELT.toCurrency(result.fundraisingGoal));
-  }
+	function onSuccess(result) {
+		const $raised = $('#raised');
+		const $goal = $('#goal');
+		const $name = $('#name');
+		$name.html(`${result.name} Goal`);
+		$raised.html(ELT.toCurrency(result.sumDonations));
+		$goal.html(ELT.toCurrency(result.fundraisingGoal));
+	}
 
-  start();
+	start();
 })(window.jQuery, window.ELT);

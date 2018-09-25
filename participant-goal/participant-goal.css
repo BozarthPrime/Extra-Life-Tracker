@@ -1,14 +1,14 @@
 #tracking-container {
-  background-color: #4074c2;
-  border-color: #ffffff;
-  color: #ffffff;
-  opacity: 1;
+	background-color: #4074c2;
+	border-color: #ffffff;
+	color: #ffffff;
+	opacity: 1;
 }
 
 .elt {
-  font-size: 1.4rem;
-  line-height: 1.4rem;
-  padding: 5px;
-  position: relative;
-  text-align: center;
+	font-size: 1.4rem;
+	line-height: 1.4rem;
+	padding: 5px;
+	position: relative;
+	text-align: center;
 }
