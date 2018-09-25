@@ -3,6 +3,8 @@
 # Overview
 Extra Life Tracker is a collection of web pages that can be used as a web source in streaming software such as OBS to display your and your team's current Extra Life fund raising status and goal.
 
+More in-depth information can be found on on [project page](http://josephbozarth.com/Extra-Life-Tracker/).
+
 # Widgets
 
 ## [Countdown Timer](/countdown-timer)
