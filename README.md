@@ -35,6 +35,12 @@ Cycles through the fundraising amounts of a specified number of participants.
 ## ![Team-Goal-Preview](docs/images/Team-Goal-Preview.png)
 Displays amount raised and goal for the specified team.
 
+<hr />
+
+## [Offline Screen](/offline-screen)
+## ![Offline-Screen-Preview](docs/images/Offline-Screen-Preview.png)
+Displays an offline message and optionally plays elevator music.
+
 # Configuration
 Each widget has a `[widget-name]-settings.js` file in its folder (e.x. `participant-goal-settings.js`), to set up the widget just update the values in there with the correct values you would like to use. There are full descriptions of the values in the settings files for each widget.
 
@@ -66,3 +72,6 @@ GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+## Attributions
+Music: The Elevator Bossa Nova from Bensound.com
