@@ -31,6 +31,13 @@ Cycles through the fundraising amounts of a specified number of participants.
 ## ![Team-Goal-Preview](images/Team-Goal-Preview.png)
 Displays amount raised and goal for the specified team.
 
+<hr />
+
+## Offline Screen
+## ![Offline-Screen-Preview](images/Offline-Screen-Preview.png)
+Displays an offline message and optionally plays elevator music.
+
+
 # Configuration
 Each widget has a `[widget-name]-settings.js` file in its folder (e.x. `participant-goal-settings.js`), to set up the widget just update the values in there with the correct values you would like to use. There are full descriptions of the values in the settings files for each widget.
 
