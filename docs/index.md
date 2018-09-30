@@ -3,37 +3,37 @@ A modualr set of streaming web source widgets to display your Extra Life stats
 
 # Widgets
 
-## Countdown Timer
+## [Countdown Timer](countdown-timer.md)
 ## ![Countdonw-Timer-Preview](images/Countdown-Timer-Preview.png)
 Displays the amount of time left in your event or the time left till your event starts if it is before the start of your event.
 
 <hr />
 
-## Last Donation
+## [Last Donation](last-donation.md)
 ## ![Last-Donation-Preview](images/Last-Donation-Preview.png)
 Displays the last donation for the specified participant.
 
 <hr />
 
-## Participant Goal
+## [Participant Goal](participant-goal.md)
 ## ![Paticipant-Goal-Preview](images/Participant-Goal-Preview.png)
 Displays amount raised and goal for the specified participant.
 
 <hr />
 
-## Subteam Participants
+## [Subteam Participants](widgets/subteam-participants.md)
 ## ![Subteam-Participants-Preview](images/Subteam-Participants-Preview.png)
 Cycles through the fundraising amounts of a specified number of participants.
 
 <hr />
 
-## Team Goal
+## [Team Goal](widgets/team-goal.md)
 ## ![Team-Goal-Preview](images/Team-Goal-Preview.png)
 Displays amount raised and goal for the specified team.
 
 <hr />
 
-## Offline Screen
+## [Offline Screen](widgets/offline-screen.md)
 ## ![Offline-Screen-Preview](images/Offline-Screen-Preview.png)
 Displays an offline message and optionally plays elevator music.
 
