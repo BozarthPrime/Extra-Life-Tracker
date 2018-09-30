@@ -7,7 +7,7 @@ A screen to display a message and play music when you are offline or taking a br
 ## Settings
 To update the settings update their value in `offline-screen-settings.js` with any plain text editor. If you use the setup process below settings changes will be reflected when the scene is next made active.
 
-| Name | Description | Value Type | Default value
+| Name | Description | Value Type | Default value |
 |---|---|---|---|
 | message | The message to display | Text | "Be Back Soon" |
 | useBackgroundImage | If the provided background image should be used instead of a baground gradiant | Boolean | true |

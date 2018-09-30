@@ -1,16 +1,25 @@
-# Offline Screen
+# Team Goal
 
-A widget that displays the amount raised and the target goal for a team
+A widget that displays the amount raised and the target goal for a team.
 
 ![Team-Goal-Preview](../images/Team-Goal-Preview.png)
 
 ## Settings
 To update the settings update their value in `team-goal-settings.js` with any plain text editor. If you make settings changes while the scene is active you can refresh the widget by right clicking the source, selecting "Properties" and then clicking "Refresh cache of current page".
 
-| Name | Description | Value Type | Default value
+| Name | Description | Value Type | Default value |
 |---|---|---|---|
 | teamId | Extra Life team ID | Text | N/A |
 | refreshTimeMS | How often the data should be refreshed in milliseconds | Integer | 10000 |
+
+### How to get your Team ID
+
+1. Go to [extra-life.org](https://www.extra-life.org/)
+2. Log in to your 
+3. Click "Team Page" in the top bar of the page
+4. Copy the Team ID out of the address bar. It is the number after "teamID" and should be at the end of the address. See example image
+
+![Get-Team-ID](../images/where-to-find-team-id.png)
 
 ## Setup in OBS
 1. In the "Sources" section click the "+" to add a new source, selecting "BrowserSource"
