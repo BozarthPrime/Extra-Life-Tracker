@@ -1,7 +1,4 @@
-# Extra Life Tracker
-A modualr set of streaming web source widgets to display your Extra Life stats
-
-# Widgets
+# The Widgets
 
 ## [Countdown Timer](widgets/countdown-timer)
 ## ![Countdonw-Timer-Preview](images/Countdown-Timer-Preview.png)
