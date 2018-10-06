@@ -1,0 +1,13 @@
+#tracking-container {
+	opacity: 1;
+}
+
+#participant-name {
+	font-size: 0.7em;
+}
+
+#donation {
+	font-size: 1em;
+	font-weight: bold;
+	line-height: 1.2em;
+}

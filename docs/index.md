@@ -30,6 +30,12 @@ Displays amount raised and goal for the specified team.
 
 <hr />
 
+## [Team Last Donation](widgets/team-last-donation)
+## ![Team-Last-Donation-Preview](images/Team-Last-Donation-Preview.png)
+Displays the last donation for the specified team.
+
+<hr />
+
 ## [Offline Screen](widgets/offline-screen)
 ## ![Offline-Screen-Preview](images/Offline-Screen-Preview.png)
 Displays an offline message and optionally plays elevator music.

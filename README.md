@@ -7,37 +7,43 @@ More in-depth information can be found on on [project page](https://josephbozart
 
 # Widgets
 
-## [Countdown Timer](/countdown-timer)
+## [Countdown Timer](https://josephbozarth.com/Extra-Life-Tracker/widgets/countdown-timer)
 ## ![Countdonw-Timer-Preview](docs/images/Countdown-Timer-Preview.png)
 Displays the amount of time left in your event or the time left till your event starts if it is before the start of your event.
 
 <hr />
 
-## [Last Donation](/last-donation)
+## [Last Donation](https://josephbozarth.com/Extra-Life-Tracker/widgets/last-donation)
 ## ![Last-Donation-Preview](docs/images/Last-Donation-Preview.png)
 Displays the last donation for the specified participant.
 
 <hr />
 
-## [Participant Goal](/participant-goal)
+## [Participant Goal](https://josephbozarth.com/Extra-Life-Tracker/widgets/participant-goal)
 ## ![Paticipant-Goal-Preview](docs/images/Participant-Goal-Preview.png)
 Displays amount raised and goal for the specified participant.
 
 <hr />
 
-## [Subteam Participants](/subteam-participants)
+## [Subteam Participants](https://josephbozarth.com/Extra-Life-Tracker/widgets/subteam-participants)
 ## ![Subteam-Participants-Preview](docs/images/Subteam-Participants-Preview.png)
 Cycles through the fundraising amounts of a specified number of participants.
 
 <hr />
 
-## [Team Goal](/team-goal)
+## [Team Goal](https://josephbozarth.com/Extra-Life-Tracker/widgets/team-goal)
 ## ![Team-Goal-Preview](docs/images/Team-Goal-Preview.png)
 Displays amount raised and goal for the specified team.
 
 <hr />
 
-## [Offline Screen](/offline-screen)
+## [Team Last Donation](https://josephbozarth.com/Extra-Life-Tracker/widgets/team-last-donation)
+## ![Team-Last-Donation-Preview](docs/images/Team-Last-Donation-Preview.png)
+Displays the last donation for the specified team.
+
+<hr />
+
+## [Offline Screen](https://josephbozarth.com/Extra-Life-Tracker/widgets/offline-screen)
 ## ![Offline-Screen-Preview](docs/images/Offline-Screen-Preview.png)
 Displays an offline message and optionally plays elevator music.
 
@@ -55,6 +61,7 @@ Each widget has a `[widget-name]-settings.js` file in its folder (e.x. `particip
 	- Participant Goal: 41
 	- Subteam Participants: (30 * number of configured participants to display at a time) + 2
 	- Team Goal: 74
+	- Team Last Donation: 76
 6. Click OK
 7. Repeat for all widgets you wish to use
 
