@@ -10,7 +10,6 @@ body {
 #tracking-container {
 	border: 2px solid;
 	position: relative;
-	border-radius: 15px;
 	background-color: #4074c2;
 	border-color: #ffffff;
 	color: #ffffff;
@@ -22,4 +21,9 @@ body {
 	padding: 3px;
 	position: relative;
 	text-align: center;
+}
+
+.small-text {
+	font-size: 0.6em;
+	line-height: 0.7em;
 }

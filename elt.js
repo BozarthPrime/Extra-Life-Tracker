@@ -34,7 +34,9 @@ window.ELT = {
 
 	api: {
 		participant: createApiActionFor('participants/{}'),
+		participantDonations: createApiActionFor('participants/{}/donations'),
 		team: createApiActionFor('teams/{}'),
-		donations: createApiActionFor('participants/{}/donations'),
+		teamParticipants: createApiActionFor('teams/{}/participants'),
+		teamDonations: createApiActionFor('teams/{}/donations'),
 	},
 };

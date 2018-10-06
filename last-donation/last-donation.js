@@ -11,7 +11,7 @@
 
     /* Main loop */
     function update() {
-        ELT.api.donations(ELT.settings.participantId, onSuccess);
+        ELT.api.participantDonations(ELT.settings.participantId, onSuccess);
     }
 
     function onSuccess(result) {
