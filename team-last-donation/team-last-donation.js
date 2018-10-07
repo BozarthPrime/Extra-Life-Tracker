@@ -10,6 +10,14 @@
 
     /* Initial setup of the layout and theme based on user settings */
     function start() {
+		const donationHeader = $('#last-donation-header');
+
+		if (ELT.settings.showHeader) {
+			donationHeader.html(ELT.settings.headerMessage);
+		} else {
+			donationHeader.hide();
+		}
+
 		$('#donation-conjunction').html(ELT.settings.conjunctionText);
 
 		ELT.api.teamParticipants(ELT.settings.teamId, function(results) {
@@ -17,8 +25,8 @@
 				teamMembers[teamMember.participantID] = teamMember;
 			});
 			
-			updateDonations();
-			update();
+			checkForNewDonations();
+			updateDonation();
 			setInterval(checkForNewDonations, ELT.settings.refreshTimeMS);
 			setInterval(updateDonation, ELT.settings.donationCycleMS); 
 		});   
@@ -49,7 +57,7 @@
 			if( lastDonation ){
 				const amount = ELT.toCurrency(lastDonation.amount);
 				const donorName = lastDonation.displayName == null ? 
-					'Mystery Hero' : lastDonation.displayName;
+					ELT.settings.unknownUsername : lastDonation.displayName;
 				
 				participant = teamMembers[lastDonation.participantID].displayName;
 				value = `${donorName}: ${amount}`;
