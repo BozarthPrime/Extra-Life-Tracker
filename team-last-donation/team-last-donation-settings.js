@@ -6,7 +6,7 @@ ELT.settings = {
 	// header message to display at the top of the widget
 	headerMessage: "Last Team Donation",
 	// name to show if the donor name is null
-	unknownUsername: "Mysterious Hero",
+	unknownDonorName: "Mysterious Hero",
 	// text to use between the donation and the participant name
 	conjunctionText: "donated to",
 	// how long to display each donation before going to the next.	

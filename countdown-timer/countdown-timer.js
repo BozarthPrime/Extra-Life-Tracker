@@ -6,7 +6,7 @@
 	/* Initial setup of the layout and theme based on user settings */
 	function start() {
 	if (!ELT.settings.displayHeader) {
-		$('#countdown-timer-header').hide();
+		$('#header').hide();
 	}
 
 	update();
@@ -15,7 +15,7 @@
 
 	/* Main loop */
 	function update() {
-		const $header = $('#countdown-timer-header');
+		const $header = $('#header');
 		const $time = $('#countdown-timer-time');
 
 		let $startTime = moment(ELT.settings.startTime);

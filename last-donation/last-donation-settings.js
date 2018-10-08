@@ -9,12 +9,12 @@ ELT.settings = {
 	headerMessage: "Last Donation",
 	// if the recipiant of the donation should be shown. This is meant
 	// for when you have more than one participantID
-	showRecipiant: true,
+	showRecipiant: false,
 	// text to use between the donation and the participant name if the
 	// recipiant is being shown
 	conjunctionText: "donated to",
 	// how long to display each donation before going to the next.	
-	donationCycleMS: 3000,
+	donationCycleMS: 10000,
 	// how often should data be refreshed
-	refreshTimeMS: 5000,
+	refreshTimeMS: 20000,
 };
