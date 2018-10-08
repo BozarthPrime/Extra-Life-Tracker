@@ -21,7 +21,7 @@ To update the settings update their value in `team-goal-settings.js` with any pl
 
 ![Get-Team-ID](../images/where-to-find-team-id.png)
 
-## Setup in OBS
+## Setup in OBS or Streamlabs
 1. In the "Sources" section click the "+" to add a new source, selecting "BrowserSource"
 2. Select the "Create new" radio button
 3. Set the name to something appropriate (e.x. "Extra Life Tracker - Team Goal")

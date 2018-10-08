@@ -10,13 +10,13 @@
 
     /* Initial setup of the layout and theme based on user settings */
     function start() {
-		const donationHeader = $('#last-donation-header');
+		const header = $('#header');
 		const donationConjunction = $('#donation-conjunction');
 
 		if (ELT.settings.showHeader) {
-			donationHeader.html(ELT.settings.headerMessage);
+			header.html(ELT.settings.headerMessage);
 		} else {
-			donationHeader.hide();
+			header.hide();
 		}	
 
 		if (ELT.settings.showRecipiant) {
@@ -68,7 +68,7 @@
 			if( curDonation ){
 				const amount = ELT.toCurrency(curDonation.amount);
 				const donorName = curDonation.displayName == null ? 
-					ELT.settings.unknownUsername : curDonation.displayName;
+					ELT.settings.unknownDonorName : curDonation.displayName;
 				
 				participant = $participants[curDonation.participantID].displayName;
 				donationText = `${donorName}: ${amount}`;

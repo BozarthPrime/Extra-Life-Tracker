@@ -5,6 +5,14 @@
 
 	/* Initial setup of the layout and theme based on user settings */
 	function start() {
+		const header = $('#header');
+
+		if (ELT.settings.showHeader) {
+			header.html(ELT.settings.headerMessage);
+		} else {
+			header.hide();
+		}
+
 		update();
 		setInterval(update, ELT.settings.refreshTimeMS);
 	}

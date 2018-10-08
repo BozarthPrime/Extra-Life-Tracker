@@ -9,7 +9,7 @@ To update the settings update their value in `subteam-participants-settings.js` 
 
 | Name | Description | Value Type | Default value |
 |---|---|---|---|
-| participantIds | Extra Life participant ID | Array of Text | Empty array |
+| participantIds | Extra Life participant IDs | Array of Text | Empty array |
 | displayCount | How many participants to display at once. If the number of participants is larger than the display count it will cycle through them | Integer | 2 |
 | refreshTimeMS | How often the data should be refreshed in milliseconds | Integer | 10000 |
 | logWhenUpdating | Development setting: If the widget should log to the javascipt console when updating | Boolean | false |
@@ -22,7 +22,7 @@ To update the settings update their value in `subteam-participants-settings.js` 
 
 ![Get-Participant-ID](../images/where-to-find-your-id.png)
 
-## Setup in OBS
+## Setup in OBS or Streamlabs
 1. In the "Sources" section click the "+" to add a new source, selecting "BrowserSource"
 2. Select the "Create new" radio button
 3. Set the name to something appropriate (e.x. "Extra Life Tracker - Subteam Participants")

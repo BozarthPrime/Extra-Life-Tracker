@@ -10,12 +10,12 @@
 
     /* Initial setup of the layout and theme based on user settings */
     function start() {
-		const donationHeader = $('#last-donation-header');
+		const header = $('#header');
 
 		if (ELT.settings.showHeader) {
-			donationHeader.html(ELT.settings.headerMessage);
+			header.html(ELT.settings.headerMessage);
 		} else {
-			donationHeader.hide();
+			header.hide();
 		}
 
 		$('#donation-conjunction').html(ELT.settings.conjunctionText);
@@ -57,7 +57,7 @@
 			if( lastDonation ){
 				const amount = ELT.toCurrency(lastDonation.amount);
 				const donorName = lastDonation.displayName == null ? 
-					ELT.settings.unknownUsername : lastDonation.displayName;
+					ELT.settings.unknownDonorName : lastDonation.displayName;
 				
 				participant = teamMembers[lastDonation.participantID].displayName;
 				value = `${donorName}: ${amount}`;

@@ -10,6 +10,8 @@ To update the settings update their value in `participant-goal-settings.js` with
 | Name | Description | Value Type | Default value |
 |---|---|---|---|
 | participantId | Extra Life participant ID | Text | N/A |
+| showHeader | If the header message should be shown | Boolean | false |
+| headerMessage | Header message to display at the top of the widget| Text | "Last Donation" |
 | refreshTimeMS | How often the data should be refreshed in milliseconds | Integer | 10000 |
 
 ### How to get your Participant ID
@@ -21,7 +23,7 @@ To update the settings update their value in `participant-goal-settings.js` with
 
 ![Get-Participant-ID](../images/where-to-find-your-id.png)
 
-## Setup in OBS
+## Setup in OBS or Streamlabs
 1. In the "Sources" section click the "+" to add a new source, selecting "BrowserSource"
 2. Select the "Create new" radio button
 3. Set the name to something appropriate (e.x. "Extra Life Tracker - Participant Goal")
@@ -30,5 +32,5 @@ To update the settings update their value in `participant-goal-settings.js` with
 6. Check "Local file"
 7. Click "Browse" next to the "Local file" line and select `participant-goal.html`
 8. Set "Width" to at least 300 (the widget will fill the whole width given)
-9. Set "Height" to 41
+9. Set "Height" to 41 (+28 with header)
 10. Click "OK" to finish the setup

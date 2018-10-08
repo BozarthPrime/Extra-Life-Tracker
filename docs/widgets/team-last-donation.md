@@ -10,6 +10,9 @@ To update the settings update their value in `team-last-donation-settings.js` wi
 | Name | Description | Value Type | Default value |
 |---|---|---|---|
 | teamId | Extra Life team ID | Text | N/A |
+| unknownDonorName | Donor name to show if the donor name is null | Text | "Mysterious Hero" |
+| showHeader | If the header message should be shown | Boolean | false |
+| headerMessage | Header message to display at the top of the widget| Text | "Last Donation" |
 | conjunctionText | Text to use between donation and participant name | Text | "donated to" |
 | donationCycleMS | When more than one donation comes in between checks it will cycle through them. This is how long to pause on each one till it gets to the latest | Integer | 10000 |
 | refreshTimeMS | How often the data should be refreshed in milliseconds | Integer | 20000 |
@@ -23,7 +26,7 @@ To update the settings update their value in `team-last-donation-settings.js` wi
 
 ![Get-Team-ID](../images/where-to-find-team-id.png)
 
-## Setup in OBS
+## Setup in OBS or Streamlabs
 1. In the "Sources" section click the "+" to add a new source, selecting "BrowserSource"
 2. Select the "Create new" radio button
 3. Set the name to something appropriate (e.x. "Extra Life Tracker - Team Last Donation")
@@ -32,5 +35,5 @@ To update the settings update their value in `team-last-donation-settings.js` wi
 6. Check "Local file"
 7. Click "Browse" next to the "Local file" line and select `team-last-donation.html`
 8. Set "Width" to at least 300 (the widget will fill the whole width given)
-9. Set "Height" to 76
+9. Set "Height" to 76 (+28 with header)
 10. Click "OK" to finish the setup

@@ -15,7 +15,7 @@ Displays the amount of time left in your event or the time left till your event 
 
 ## [Last Donation](https://josephbozarth.com/Extra-Life-Tracker/widgets/last-donation)
 ## ![Last-Donation-Preview](docs/images/Last-Donation-Preview.png)
-Displays the last donation for the specified participant.
+Displays the last donation for the specified participant or set of participants.
 
 <hr />
 
@@ -50,18 +50,18 @@ Displays an offline message and optionally plays elevator music.
 # Configuration
 Each widget has a `[widget-name]-settings.js` file in its folder (e.x. `participant-goal-settings.js`), to set up the widget just update the values in there with the correct values you would like to use. There are full descriptions of the values in the settings files for each widget.
 
-# Setup in OBS
+# Setup in OBS or Streamlabs
 1. Add a new BrowserSource and give it a name (e.x. "Extra Life Tracker - Team Goal")
 2. Tick the Local File box
 3. Click the browse button next to the Local File line and select the html file of the widget you want to add
 4. Set the width to whatever your desired width is (300 is a goo starting point). The list will automatically adjust to the defined width
 5. Set the height according the what widget you are adding
 	- Countdown Timer: 41
-	- Last Donation: 41
-	- Participant Goal: 41
+	- Last Donation: 41 (+28 with header, +35 with recipiant)
+	- Participant Goal: 41 (+28 with header)
 	- Subteam Participants: (30 * number of configured participants to display at a time) + 2
 	- Team Goal: 74
-	- Team Last Donation: 76
+	- Team Last Donation: 76 (+28 with header)
 6. Click OK
 7. Repeat for all widgets you wish to use
 

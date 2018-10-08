@@ -3,19 +3,6 @@
 	line-height: 1.2em;
 }
 
-.name {
-	background-color: #1a4c6d;
-	display: block;
-	font-size: 1em;
-	font-weight: bold;
-	line-height: 1em;
-	padding: 3px;
-	position: relative;
-	left: -3px;
-	top: -3px;
-	width: 100%;
-}
-
 .raised,
 .goal,
 .spacer {

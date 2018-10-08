@@ -15,6 +15,19 @@ body {
 	color: #ffffff;
 }
 
+#header {
+	background-color: #1a4c6d;
+	display: block;
+	font-size: 1em;
+	font-weight: bold;
+	line-height: 1em;
+	padding: 3px;
+	position: relative;
+	left: -3px;
+	top: -3px;
+	width: 100%;
+}
+
 .elt {
 	font-size: 1.4em;
 	line-height: 1.4em;

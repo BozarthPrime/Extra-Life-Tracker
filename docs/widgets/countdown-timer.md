@@ -18,7 +18,7 @@ To update the settings update their value in `countdown-timer-settings.js` with 
 | afterEndHeader | Header message to display after the event ends | Text | "Overtime" |
 | refreshTimeMS | How often the data should be refreshed in milliseconds. If you are displaying seconds set this to 1000 | Integer | 10000 |
 
-## Setup in OBS
+## Setup in OBS or Streamlabs
 1. In the "Sources" section click the "+" to add a new source, selecting "BrowserSource"
 2. Select the "Create new" radio button
 3. Set the name to something appropriate (e.x. "Extra Life Tracker - Last Donation")

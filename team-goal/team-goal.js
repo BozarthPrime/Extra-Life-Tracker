@@ -17,8 +17,8 @@
 	function onSuccess(result) {
 		const $raised = $('#raised');
 		const $goal = $('#goal');
-		const $name = $('#name');
-		$name.html(`${result.name} Goal`);
+		const $header = $('#header');
+		$header.html(`${result.name} Goal`);
 		$raised.html(ELT.toCurrency(result.sumDonations));
 		$goal.html(ELT.toCurrency(result.fundraisingGoal));
 	}

@@ -15,7 +15,7 @@ To update the settings update their value in `offline-screen-settings.js` with a
 | playMusic | If the provided music file should be played when the offline screen is active | Boolean | true |
 | music | Path to music track to play | Text | "bensound-theelevatorbossanova.mp3" |
 
-## Setup in OBS
+## Setup in OBS or Streamlabs
 These steps will get you set up in OBS with this as a new scene that you can select when you want to go offline and will have the message and music refresh when the scene becomes visable and turn the scene off (muting any music) when the scene is left.
 
 1. In the "Scenes" section click the "+" to add a new scene
