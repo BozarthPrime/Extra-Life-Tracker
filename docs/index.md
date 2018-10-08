@@ -44,7 +44,7 @@ Displays an offline message and optionally plays elevator music.
 # Configuration
 Each widget has a `[widget-name]-settings.js` file in its folder (e.x. `participant-goal-settings.js`), to set up the widget just update the values in there with the correct values you would like to use. There are full descriptions of the values in the settings files for each widget.
 
-# Setup in OBS
+# Setup in OBS or Streamlabs
 1. Add a new BrowserSource and give it a name (e.x. "Extra Life Tracker - Team Goal")
 2. Tick the Local File box
 3. Click the browse button next to the Local File line and select the html file of the widget you want to add
