@@ -27,5 +27,5 @@ To update the settings update their value in `countdown-timer-settings.js` with 
 6. Check "Local file"
 7. Click "Browse" next to the "Local file" line and select `countdown-timer.html`
 8. Set "Width" to at least 300 (the widget will fill the whole width given)
-9. Set "Height" to 41
+9. Set "Height" to 69
 10. Click "OK" to finish the setup
