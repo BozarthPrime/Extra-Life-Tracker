@@ -14,7 +14,7 @@ Displays the last donation for the specified participant.
 
 ## [Participant Goal](widgets/participant-goal)
 ## ![Paticipant-Goal-Preview](images/Participant-Goal-Preview.png)
-Displays amount raised and goal for the specified participant.
+Displays amount raised and goal for the specified participant or set of participants.
 
 <hr />
 
