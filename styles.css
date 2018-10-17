@@ -10,13 +10,13 @@ body {
 #tracking-container {
 	border: 2px solid;
 	position: relative;
-	background-color: #4074c2;
+	background-color: #4074c2; /* Grey Theme: #9DB4C0 */
 	border-color: #ffffff;
 	color: #ffffff;
 }
 
 #header {
-	background-color: #1a4c6d;
+	background-color: #1a4c6d; /* Grey Theme: #465362 */
 	display: block;
 	font-size: 1em;
 	font-weight: bold;
