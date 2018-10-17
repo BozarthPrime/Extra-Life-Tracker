@@ -8,6 +8,14 @@
 
 	/* Initial setup of the layout and theme based on user settings */
 	function start() {
+		const header = $('#header');
+
+		if (ELT.settings.showHeader) {
+			header.html(ELT.settings.headerMessage);
+		} else {
+			header.hide();
+		}	
+
 		// if the number to display is less than the number to display
 		if (settings.displayCount > settings.participantIds.length || settings.displayCount < 1) {
 			settings.displayCount = settings.participantIds.length;
@@ -46,7 +54,7 @@
 						console.log(participantResults);
 					}
 
-					$("#tracking-container").html("");
+					$("#goals").html("");
 
 					for (let j = 0; j < displayingParticipants.length; j++) {
 						for (let k = 0; k < participantResults.length; k++) {
@@ -69,7 +77,7 @@
 		const name = $('<span/>', { class: 'name' });
 		const raised = $('<span/>', { class: 'raised' });
 
-		tracker.appendTo('#tracking-container');
+		tracker.appendTo('#goals');
 		name.appendTo(tracker);
 		raised.appendTo(tracker);
 

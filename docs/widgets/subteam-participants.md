@@ -11,6 +11,8 @@ To update the settings update their value in `subteam-participants-settings.js` 
 |---|---|---|---|
 | participantIds | Extra Life participant IDs | Array of Text | Empty array |
 | displayCount | How many participants to display at once. If the number of participants is larger than the display count it will cycle through them | Integer | 2 |
+| showHeader | If the header message should be shown | Boolean | true |
+| headerMessage | Header message to display at the top of the widget| Text | "Donation Goals" |
 | refreshTimeMS | How often the data should be refreshed in milliseconds | Integer | 10000 |
 | logWhenUpdating | Development setting: If the widget should log to the javascipt console when updating | Boolean | false |
 
@@ -31,5 +33,5 @@ To update the settings update their value in `subteam-participants-settings.js` 
 6. Check "Local file"
 7. Click "Browse" next to the "Local file" line and select `subteam-participants.html`
 8. Set "Width" to at least 300 (the widget will fill the whole width given)
-9. Set "Height" to (30 * displayCount) + 2
+9. Set "Height" to (30 * displayCount) + 2 (+28 with header)
 10. Click "OK" to finish the setup

@@ -50,10 +50,10 @@ Each widget has a `[widget-name]-settings.js` file in its folder (e.x. `particip
 3. Click the browse button next to the Local File line and select the html file of the widget you want to add
 4. Set the width to whatever your desired width is (300 is a goo starting point). The list will automatically adjust to the defined width
 5. Set the height according the what widget you are adding
-	- Countdown Timer: 39
+	- Countdown Timer: 69
 	- Last Donation: 41 (+28 with header, +35 with recipiant)
 	- Participant Goal: 41 (+28 with header)
-	- Subteam Participants: (30 * number of configured participants to display at a time) + 2
+	- Subteam Participants: (30 * number of configured participants to display at a time) + 2 (+28 with header)
 	- Team Goal: 74
 	- Team Last Donation: 76 (+28 with header)
 6. Click OK

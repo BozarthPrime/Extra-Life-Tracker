@@ -18,12 +18,18 @@
 	border-top: solid 1px #4780d6;
 }
 
+.participant-tracker-container .name {
+	text-align: left;
+}
+
 .participant-tracker-container .raised {
 	text-align: right;
 }
 
 .participant-tracker-container .raised,
 .participant-tracker-container .name {
+	font-size: 0.75em;
+	line-height: 0.8em;
 	display: inline-block;
 	width: 50%;
 }
