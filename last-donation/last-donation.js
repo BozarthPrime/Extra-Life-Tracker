@@ -1,33 +1,86 @@
 (function( $, ELT ){
-  /**********
-   * Main Functionality
-   **********/
+    /**********
+     * Main Functionality
+     **********/
 
-  /* Initial setup of the layout and theme based on user settings */
-  function start() {
-    update();
-    setInterval(update, ELT.settings.refreshTimeMS);
-  }
+	var $participants = {};
+	var $newDonations = [];
+	const $donation = $('#donation');
+	const $participantName = $('#participant-name');
 
-  /* Main loop */
-  function update() {
-    ELT.api.donations({ participantID: ELT.settings.participantId }, onSuccess);
-  }
+    /* Initial setup of the layout and theme based on user settings */
+    function start() {
+		const header = $('#header');
+		const donationConjunction = $('#donation-conjunction');
 
-  function onSuccess(result) {
-    const $container = $('#tracking-container');
-    let value;
-    const lastDonation = result[0];
-    
-    if( lastDonation ){
-      const amount = ELT.toCurrency(lastDonation.donationAmount);
-      value = `${lastDonation.donorName}: ${amount}`;
+		if (ELT.settings.showHeader) {
+			header.html(ELT.settings.headerMessage);
+		} else {
+			header.hide();
+		}	
+
+		if (ELT.settings.showRecipiant) {
+			donationConjunction.html(ELT.settings.conjunctionText);
+		} else {
+			donationConjunction.hide();
+			$participantName.hide();
+		}
+		
+		ELT.settings.participantIds.forEach(function(participantId) {
+			ELT.api.participant(participantId, function(result) {
+				result['donationsSeen'] = 0;
+				$participants[result.participantID] = result;
+			});
+		});
+
+		checkForNewDonations();
+        updateDonation();
+		setInterval(checkForNewDonations, ELT.settings.refreshTimeMS);
+		setInterval(updateDonation, ELT.settings.donationCycleMS); 
+	}	
+
+	/* Main loop */
+    function checkForNewDonations() {
+		ELT.settings.participantIds.forEach(function(participantId) {
+			ELT.api.participantDonations(participantId, checkForNewDonationsOnSuccess);
+		});	
     }
-    else {
-      value = 'No donations'
-    }
-    $container.html( value );
-  }
 
-  start();
+    function checkForNewDonationsOnSuccess(results) {
+		if (results.length > 0) {
+			const curParticipant = $participants[results[0].participantID];
+
+			if (curParticipant != null && results.length > curParticipant.donationsSeen) {
+				const newItems = results.slice(0, results.length - curParticipant.donationsSeen);
+				
+				$newDonations = $newDonations.concat(newItems);
+				curParticipant.donationsSeen = results.length;
+			}
+		}
+	}
+	
+	function updateDonation() {
+		if ($newDonations.length > 0) {
+			let donationText;
+			let participant;
+			const curDonation = $newDonations.pop();
+
+			if( curDonation ){
+				const amount = ELT.toCurrency(curDonation.amount);
+				const donorName = curDonation.displayName == null ? 
+					ELT.settings.unknownDonorName : curDonation.displayName;
+				
+				participant = $participants[curDonation.participantID].displayName;
+				donationText = `${donorName}: ${amount}`;
+			} else {
+				participant = ' ';
+				donationText = 'No donations';
+			}
+
+			$participantName.html( participant );
+			$donation.html( donationText );
+		}
+	}
+
+    start();
 })(window.jQuery, window.ELT);

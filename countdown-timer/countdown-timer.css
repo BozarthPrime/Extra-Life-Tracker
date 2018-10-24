@@ -1,0 +1,8 @@
+#tracking-container {
+	opacity: 1;
+}
+
+#countdown-timer-time {
+	font-family: monospace;
+	font-size: 1.2em;
+}

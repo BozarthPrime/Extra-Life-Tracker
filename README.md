@@ -1,29 +1,70 @@
-# Extra Life Tracker
+# ![Extra-Life-Tracker-Header](docs/images/Extra-Life-Traker-Header.png)
 
-## Overview
+# Overview
 Extra Life Tracker is a collection of web pages that can be used as a web source in streaming software such as OBS to display your and your team's current Extra Life fund raising status and goal.
 
-## Widgets
+More in-depth information can be found on on [project page](https://josephbozarth.com/Extra-Life-Tracker/).
 
-### [Last Donation](/last-donation)
-Displays the last donation for the specified participant.
+# Widgets
 
-### [Participant Goal](/participant-goal)
+## [Countdown Timer](https://josephbozarth.com/Extra-Life-Tracker/widgets/countdown-timer)
+## ![Countdonw-Timer-Preview](docs/images/Countdown-Timer-Preview.png)
+Displays the amount of time left in your event or the time left till your event starts if it is before the start of your event.
+
+<hr />
+
+## [Last Donation](https://josephbozarth.com/Extra-Life-Tracker/widgets/last-donation)
+## ![Last-Donation-Preview](docs/images/Last-Donation-Preview.png)
+Displays the last donation for the specified participant or set of participants.
+
+<hr />
+
+## [Participant Goal](https://josephbozarth.com/Extra-Life-Tracker/widgets/participant-goal)
+## ![Paticipant-Goal-Preview](docs/images/Participant-Goal-Preview.png)
 Displays amount raised and goal for the specified participant.
 
-### [Subteam Participants](/subteam-participants)
+<hr />
+
+## [Subteam Participants](https://josephbozarth.com/Extra-Life-Tracker/widgets/subteam-participants)
+## ![Subteam-Participants-Preview](docs/images/Subteam-Participants-Preview.png)
 Cycles through the fundraising amounts of a specified number of participants.
 
-### [Team Goal](/team-goal)
+<hr />
+
+## [Team Goal](https://josephbozarth.com/Extra-Life-Tracker/widgets/team-goal)
+## ![Team-Goal-Preview](docs/images/Team-Goal-Preview.png)
 Displays amount raised and goal for the specified team.
 
-## Setup in OBS
-1. Add a new BrowserSource and give it a name (e.g. "Extra Life Tracker")
+<hr />
+
+## [Team Last Donation](https://josephbozarth.com/Extra-Life-Tracker/widgets/team-last-donation)
+## ![Team-Last-Donation-Preview](docs/images/Team-Last-Donation-Preview.png)
+Displays the last donation for the specified team.
+
+<hr />
+
+## [Offline Screen](https://josephbozarth.com/Extra-Life-Tracker/widgets/offline-screen)
+## ![Offline-Screen-Preview](docs/images/Offline-Screen-Preview.png)
+Displays an offline message and optionally plays elevator music.
+
+# Configuration
+Each widget has a `[widget-name]-settings.js` file in its folder (e.x. `participant-goal-settings.js`), to set up the widget just update the values in there with the correct values you would like to use. There are full descriptions of the values in the settings files for each widget.
+
+# Setup in OBS or Streamlabs
+1. Add a new BrowserSource and give it a name (e.x. "Extra Life Tracker - Team Goal")
 2. Tick the Local File box
-3. Click the browse button next to the Local File line and select extra-life-tracker.html
-4. Set the width to whatever your desired width is. The list will automatically adjust to the defined width.
-5. Set the height to something large like 500. The end height will be directly proportional to the `displayCount` you define within settings.js. Just make sure to set the height large enough to account for the number being displayed. For example, displaying a team along with 2 participants at a time, your minimum height needs to be 125.
+3. Click the browse button next to the Local File line and select the html file of the widget you want to add
+4. Set the width to whatever your desired width is (300 is a goo starting point). The list will automatically adjust to the defined width
+5. Set the height according the what widget you are adding
+	- Countdown Timer: 69
+	- Last Donation: 41 (+28 with header, +35 with recipiant)
+	- Participant Goal: 41 (+28 with header)
+	- Subteam Participants: (30 * number of configured participants to display at a time) + 2 (+28 with header)
+	- Team Goal: 74
+	- Team Last Donation: 76 (+28 with header)
 6. Click OK
+7. Repeat for all widgets you wish to use
+
 
 ## License
 This program is free software: you can redistribute it and/or modify
@@ -38,3 +79,6 @@ GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+## Attributions
+Music: The Elevator Bossa Nova from Bensound.com

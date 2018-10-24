@@ -1,14 +1,13 @@
 #tracking-container {
-  background-color: #4074c2;
-  border-color: #ffffff;
-  color: #ffffff;
-  opacity: 1;
+	opacity: 1;
 }
 
-.elt {
-  font-size: 1.2rem;
-  line-height: 1.2rem;
-  padding: 5px;
-  position: relative;
-  text-align: center;
+#participant-name {
+	font-size: 0.7em;
+}
+
+#donation {
+	font-size: 1em;
+	font-weight: bold;
+	line-height: 1.2em;
 }

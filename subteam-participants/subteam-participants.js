@@ -1,85 +1,91 @@
 (function ($, ELT) {
-  const settings = ELT.settings;
-  let positionInRotation = 0;
+	const settings = ELT.settings;
+	let positionInRotation = 0;
 
-  /**********
-   * Main Functionality
-   **********/
+	/**********
+	 * Main Functionality
+	 **********/
 
-  /* Initial setup of the layout and theme based on user settings */
-  function start() {
-    // if the number to display is less than the number to display
-    if (settings.displayCount > settings.participantIds.length || settings.displayCount < 1) {
-      settings.displayCount = settings.participantIds.length;
-    }
+	/* Initial setup of the layout and theme based on user settings */
+	function start() {
+		const header = $('#header');
 
-    /* Call update to do initial populate and then repeat at interval */
-    updateParticipants();
-    setInterval(updateParticipants, settings.refreshTimeMS);
-  }
+		if (ELT.settings.showHeader) {
+			header.html(ELT.settings.headerMessage);
+		} else {
+			header.hide();
+		}	
 
-  /**********
-   * Update Helpers
-   **********/
+		// if the number to display is less than the number to display
+		if (settings.displayCount > settings.participantIds.length || settings.displayCount < 1) {
+			settings.displayCount = settings.participantIds.length;
+		}
 
-  function updateParticipants() {
-    const displayingParticipants = [];
+		/* Call update to do initial populate and then repeat at interval */
+		updateParticipants();
+		setInterval(updateParticipants, settings.refreshTimeMS);
+	}
 
-    for (let i = 0; i < settings.displayCount; i++) {
-      displayingParticipants.push(settings.participantIds[positionInRotation]);
+	/**********
+	 * Update Helpers
+	 **********/
 
-      if (positionInRotation == settings.participantIds.length - 1) {
-        positionInRotation = 0;
-      } else {
-        positionInRotation = positionInRotation + 1;
-      }
-    }
+	function updateParticipants() {
+		const displayingParticipants = [];
 
-    let participantResults = [];
+		for (let i = 0; i < settings.displayCount; i++) {
+			displayingParticipants.push(settings.participantIds[positionInRotation]);
 
-    for (let i = 0; i < displayingParticipants.length; i++) {
-      const params = { participantID: displayingParticipants[i] };
+			if (positionInRotation == settings.participantIds.length - 1) {
+				positionInRotation = 0;
+			} else {
+				positionInRotation = positionInRotation + 1;
+			}
+		}
 
-      ELT.api.participant(params, function (result) {
-        participantResults.push(result);
+		let participantResults = [];
 
-        if (participantResults.length == displayingParticipants.length) {
-          if (settings.logWhenUpdating) {
-            console.log(participantResults);
-          }
+		for (let i = 0; i < displayingParticipants.length; i++) {
+			ELT.api.participant(displayingParticipants[i], function (result) {
+				participantResults.push(result);
 
-          $("#tracking-container").html("");
+				if (participantResults.length == displayingParticipants.length) {
+					if (settings.logWhenUpdating) {
+						console.log(participantResults);
+					}
 
-          for (let j = 0; j < displayingParticipants.length; j++) {
-            for (let k = 0; k < participantResults.length; k++) {
-              if (participantResults[k].participantID == displayingParticipants[j]) {
-                makeParticipantTracker(participantResults[k]);
-              }
-            }
-          }
-        }
-      });
-    }
-  }
+					$("#goals").html("");
 
-  /**********
-   * General Helpers
-   **********/
+					for (let j = 0; j < displayingParticipants.length; j++) {
+						for (let k = 0; k < participantResults.length; k++) {
+							if (participantResults[k].participantID == displayingParticipants[j]) {
+								makeParticipantTracker(participantResults[k]);
+							}
+						}
+					}
+				}
+			});
+		}
+	}
 
-  function makeParticipantTracker(participantData) {
-    const tracker = $('<div/>', { class: 'participant-tracker-container' });
-    const name = $('<span/>', { class: 'name' });
-    const raised = $('<span/>', { class: 'raised' });
+	/**********
+	 * General Helpers
+	 **********/
 
-    tracker.appendTo('#tracking-container');
-    name.appendTo(tracker);
-    raised.appendTo(tracker);
+	function makeParticipantTracker(participantData) {
+		const tracker = $('<div/>', { class: 'participant-tracker-container' });
+		const name = $('<span/>', { class: 'name' });
+		const raised = $('<span/>', { class: 'raised' });
 
-    name.html(participantData.displayName);
-    const raisedAmount = ELT.toCurrency(participantData.totalRaisedAmount);
-    const goalAmount = ELT.toCurrency(participantData.fundraisingGoal);
-    raised.html(raisedAmount + " / " + goalAmount);
-  }
+		tracker.appendTo('#goals');
+		name.appendTo(tracker);
+		raised.appendTo(tracker);
 
-  start();
+		name.html(participantData.displayName);
+		const raisedAmount = ELT.toCurrency(participantData.sumDonations);
+		const goalAmount = ELT.toCurrency(participantData.fundraisingGoal);
+		raised.html(raisedAmount + " / " + goalAmount);
+	}
+
+	start();
 })(window.jQuery, window.ELT);
