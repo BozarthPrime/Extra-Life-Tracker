@@ -2,21 +2,34 @@
 
 Displays the name of the last donator and amount they donated to a specified participant or set of participants campaigns.
 
-![Last-Donation-Preview](../images/Last-Donation-Preview.png)
+Static
+
+![Last Donation](../images/Last-Donation-Preview.png)
+
+Animated with header
+
+![Animated Last Donation](../images/last-donation-animated-preview.gif)
+
+Animated with header and recipient
+
+![Animated Last Donation](../images/last-donation-animated-with-recipient-preview.gif)
 
 ## Settings
 To update the settings update their value in `last-donation-settings.js` with any plain text editor. If you make settings changes while the scene is active you can refresh the widget by right clicking the source, selecting "Properties" and then clicking "Refresh cache of current page".
 
 | Name | Description | Value Type | Default value |
 |---|---|---|---|
+| animate | Animate the last donation instead of persist on screen | Boolean | false |
+| animationPauseMS | Duration that the last donation message is displayed in milliseconds | Integer | 5000 |
 | participantIds | Extra Life participant IDs | Array of Text | Empty array |
 | unknownDonorName | Donor name to show if the donor name is null | Text | "Mysterious Hero" |
+| unknownDonationAmountText | Text to display when donor has elected to only show the amount to the participant | Text | "Private Donation" |
 | showHeader | If the header message should be shown | Boolean | false |
 | headerMessage | Header message to display at the top of the widget| Text | "Last Donation" |
-| showRecipiant | How often the data should be refreshed in milliseconds | Boolean | false |
-| conjunctionText | Text to use between the donation and the participant name if the recipiant is being shown | Text | "donated to" |
-| donationCycleMS | How long to display each donation before going to the next. | Integer | 20000 |
-| refreshTimeMS | How often the data should be refreshed in milliseconds | Integer | 20000 |
+| showRecipiant | Should the recipient of the donation be shown | Boolean | false |
+| conjunctionText | Text to use between the donation and the participant name if `showRecipiant` is true | Text | "donated to" |
+| donationCycleMS | How long to display each donation before going to the next. | Integer | 10000 |
+| refreshTimeMS | How often the data should be refreshed in milliseconds | Integer | 10000 |
 
 ### How to get someone's Participant ID
 
@@ -34,6 +47,7 @@ To update the settings update their value in `last-donation-settings.js` with an
 5. Click "OK" to create the source
 6. Check "Local file"
 7. Click "Browse" next to the "Local file" line and select `last-donation.html`
-8. Set "Width" to at least 300 (the widget will fill the whole width given)
-9. Set "Height" to 41 (+28 with header, +35 with recipiant)
-10. Click "OK" to finish the setup
+8. Set "Width" to at least 300 (the widget will fill the whole width given). 450 if using animation.
+9. Set "Height" to 41. 70 if using animation. (+28 with header, +35 with recipiant)
+10. Click "OK"
+11. Finally, if using animation, position the source to the right hand side of the screen since it animates from the right.

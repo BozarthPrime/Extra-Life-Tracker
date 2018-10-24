@@ -2,6 +2,14 @@
 	opacity: 1;
 }
 
+#tracking-container.animate {
+	border: none;
+	padding: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
 #participant-name {
 	font-size: 0.7em;
 }
@@ -10,4 +18,93 @@
 	font-size: 1em;
 	font-weight: bold;
 	line-height: 1.2em;
+}
+
+.donor-separator {
+	display: inline-block;
+	margin-right: 5px;
+}
+
+.animate {
+	animation-duration: 500ms;
+	animation-name: slideout;
+	animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 1.0);
+	opacity: 0;
+	overflow: hidden;
+	padding: 0;
+	white-space: nowrap;
+	width: 0;
+}
+
+.animate .donor-separator {
+	display: none;
+}
+
+.animate #donation,
+.animate #donation .donor-name,
+.animate #donation .donor-amount {
+	display: block;
+}
+
+.animate .donor-amount {
+	font-style: italic;
+}
+
+.animate #header,
+.animate #donation,
+.animate #donation-conjunction,
+.animate #participant-name {
+	padding-left: 8px;
+	padding-right: 3px;
+	text-align: left;
+}
+.animate #header {
+	padding: 3px 3px 3px 8px;
+	left: 0;
+	top: 0;
+}
+
+.animate #header,
+.animate #donation, {
+	padding-top: 8px;
+}
+
+.animate #donation {
+	padding-bottom: 8px;
+}
+
+.animate #header + #donation {
+	padding-top: 3px;
+}
+
+.animate-in {
+	animation-duration: 300ms;
+	animation-name: slidein;
+	animation-timing-function: ease-in-circ;
+	opacity: 1;
+	width: 400px;
+}
+
+@keyframes slidein {
+  0% {
+		width: 0;
+  }
+	70% {
+		width: 425px;
+	}
+  100% {
+    width: 400px;
+  }
+}
+
+@keyframes slideout {
+  0% {
+		width: 400px;
+  }
+	80% {
+		width: 425px;
+	}
+  100% {
+    width: 0;
+  }
 }
