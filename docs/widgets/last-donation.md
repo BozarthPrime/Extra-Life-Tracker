@@ -2,15 +2,15 @@
 
 Displays the name of the last donator and amount they donated to a specified participant or set of participants campaigns.
 
-Static
+### Static
 
 ![Last Donation](../images/Last-Donation-Preview.png)
 
-Animated with header
+### Animated with header
 
 ![Animated Last Donation](../images/last-donation-animated-preview.gif)
 
-Animated with header and recipient
+### Animated with header and recipient
 
 ![Animated Last Donation](../images/last-donation-animated-with-recipient-preview.gif)
 
