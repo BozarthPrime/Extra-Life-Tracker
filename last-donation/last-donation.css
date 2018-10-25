@@ -86,25 +86,25 @@
 }
 
 @keyframes slidein {
-  0% {
+	0% {
 		width: 0;
-  }
+	}
 	70% {
 		width: 425px;
 	}
-  100% {
-    width: 400px;
-  }
+	100% {
+		width: 400px;
+	}
 }
 
 @keyframes slideout {
-  0% {
+	0% {
 		width: 400px;
-  }
+	}
 	80% {
 		width: 425px;
 	}
-  100% {
-    width: 0;
-  }
+	100% {
+		width: 0;
+	}
 }
