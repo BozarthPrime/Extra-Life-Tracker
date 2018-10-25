@@ -21,14 +21,16 @@
 		}
 
 		if( ELT.settings.animate ) {
-			$trackingContainer.addClass('animate');
+			$trackingContainer.addClass('animate')
+				// add animation direction
+				.addClass(`animate-${ELT.settings.animationDirection}`);
 		}
 
 		if (ELT.settings.showRecipient) {
 			donationConjunction.html(ELT.settings.conjunctionText);
 		} else {
-			donationConjunction.hide();
-			$participantName.hide();
+			donationConjunction.remove();
+			$participantName.remove();
 		}
 		
 		ELT.settings.participantIds.forEach(function(participantId) {

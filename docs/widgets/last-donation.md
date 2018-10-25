@@ -20,7 +20,8 @@ To update the settings update their value in `last-donation-settings.js` with an
 | Name | Description | Value Type | Default value |
 |---|---|---|---|
 | animate | Animate the last donation instead of persist on screen | Boolean | false |
-| animationPauseMS | Duration that the last donation message is displayed in milliseconds | Integer | 5000 |
+| animationPauseMS | Duration that the last donation message is displayed in milliseconds. Only used if animate is true | Integer | 5000 |
+| animationDirection | Direction of animation. Only used if animate is true | "left" \| "right" | "left" |
 | participantIds | Extra Life participant IDs | Array of Text | Empty array |
 | unknownDonorName | Donor name to show if the donor name is null | Text | "Mysterious Hero" |
 | unknownDonationAmountText | Text to display when donor has elected to only show the amount to the participant | Text | "Private Donation" |
@@ -50,4 +51,4 @@ To update the settings update their value in `last-donation-settings.js` with an
 8. Set "Width" to at least 300 (the widget will fill the whole width given). 450 if using animation.
 9. Set "Height" to 41. 70 if using animation. (+28 with header, +35 with recipient)
 10. Click "OK"
-11. Finally, if using animation, position the source to the right hand side of the screen since it animates from the right.
+11. Finally, if using animation, position the source to the right or left hand side of the screen to coincide with the animation.

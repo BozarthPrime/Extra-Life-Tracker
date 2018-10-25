@@ -6,7 +6,15 @@
 	border: none;
 	padding: 0;
 	position: absolute;
+}
+
+#tracking-container.animate-left {
 	right: 0;
+	top: 0;
+}
+
+#tracking-container.animate-right {
+	left: 0;
 	top: 0;
 }
 
@@ -27,13 +35,22 @@
 
 .animate {
 	animation-duration: 500ms;
-	animation-name: slideout;
 	animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 1.0);
 	opacity: 0;
 	overflow: hidden;
 	padding: 0;
+	text-align: left;
 	white-space: nowrap;
+}
+
+.animate-left,
+.animate-right {
+	animation-name: slideHorzOut;
 	width: 0;
+}
+
+.animate-right {
+	text-align: right;
 }
 
 .animate .donor-separator {
@@ -55,22 +72,23 @@
 .animate #donation-conjunction,
 .animate #participant-name {
 	padding-left: 8px;
-	padding-right: 3px;
-	text-align: left;
+	padding-right: 8px;
+	width: auto;
 }
+
 .animate #header {
-	padding: 3px 3px 3px 8px;
+	padding: 3px 8px;
 	left: 0;
 	top: 0;
 }
 
 .animate #header,
-.animate #donation, {
-	padding-top: 8px;
+.animate #donation {
+	padding-top: 4px;
 }
 
 .animate #donation {
-	padding-bottom: 8px;
+	padding-bottom: 4px;
 }
 
 .animate #header + #donation {
@@ -79,13 +97,17 @@
 
 .animate-in {
 	animation-duration: 300ms;
-	animation-name: slidein;
 	animation-timing-function: ease-in-circ;
 	opacity: 1;
+}
+
+.animate-left.animate-in,
+.animate-right.animate-in {
+	animation-name: slideHorzIn;
 	width: 400px;
 }
 
-@keyframes slidein {
+@keyframes slideHorzIn {
 	0% {
 		width: 0;
 	}
@@ -97,7 +119,7 @@
 	}
 }
 
-@keyframes slideout {
+@keyframes slideHorzOut {
 	0% {
 		width: 400px;
 	}
