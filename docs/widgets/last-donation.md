@@ -26,8 +26,8 @@ To update the settings update their value in `last-donation-settings.js` with an
 | unknownDonationAmountText | Text to display when donor has elected to only show the amount to the participant | Text | "Private Donation" |
 | showHeader | If the header message should be shown | Boolean | false |
 | headerMessage | Header message to display at the top of the widget| Text | "Last Donation" |
-| showRecipiant | Should the recipient of the donation be shown | Boolean | false |
-| conjunctionText | Text to use between the donation and the participant name if `showRecipiant` is true | Text | "donated to" |
+| showRecipient | Should the recipient of the donation be shown | Boolean | false |
+| conjunctionText | Text to use between the donation and the participant name if `showRecipient` is true | Text | "donated to" |
 | donationCycleMS | How long to display each donation before going to the next. | Integer | 10000 |
 | refreshTimeMS | How often the data should be refreshed in milliseconds | Integer | 10000 |
 
@@ -48,6 +48,6 @@ To update the settings update their value in `last-donation-settings.js` with an
 6. Check "Local file"
 7. Click "Browse" next to the "Local file" line and select `last-donation.html`
 8. Set "Width" to at least 300 (the widget will fill the whole width given). 450 if using animation.
-9. Set "Height" to 41. 70 if using animation. (+28 with header, +35 with recipiant)
+9. Set "Height" to 41. 70 if using animation. (+28 with header, +35 with recipient)
 10. Click "OK"
 11. Finally, if using animation, position the source to the right hand side of the screen since it animates from the right.

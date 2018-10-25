@@ -15,7 +15,7 @@ ELT.settings = {
 	headerMessage: "Last Donation",
 	// if the recipiant of the donation should be shown. This is meant
 	// for when you have more than one participantID
-	showRecipiant: false,
+	showRecipient: false,
 	// text to use between the donation and the participant name if the
 	// recipiant is being shown
 	conjunctionText: "donated to",

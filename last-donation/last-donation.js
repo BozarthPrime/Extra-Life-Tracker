@@ -24,7 +24,7 @@
 			$trackingContainer.addClass('animate');
 		}
 
-		if (ELT.settings.showRecipiant) {
+		if (ELT.settings.showRecipient) {
 			donationConjunction.html(ELT.settings.conjunctionText);
 		} else {
 			donationConjunction.hide();
