@@ -4,7 +4,7 @@ ELT.settings = {
 	// animation pause duration
 	animationPauseMS: 5000,
 	// direction of animation
-	animationDirection: 'left',
+	animateTo: 'left',
 	// get donation information for this team
 	participantIds: [],
 	// name to show if the donor name is null
