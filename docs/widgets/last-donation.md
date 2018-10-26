@@ -12,7 +12,11 @@ Displays the name of the last donator and amount they donated to a specified par
 
 ### Animated with header and recipient
 
-![Animated Last Donation](../images/last-donation-animated-with-recipient-preview.gif)
+![Animated Last Donation with recipient](../images/last-donation-animated-with-recipient-preview.gif)
+
+### Animation from left
+
+![Animated Last Donation from left](../images/last-donation-animated-left-preview.gif)
 
 ## Settings
 To update the settings update their value in `last-donation-settings.js` with any plain text editor. If you make settings changes while the scene is active you can refresh the widget by right clicking the source, selecting "Properties" and then clicking "Refresh cache of current page".
