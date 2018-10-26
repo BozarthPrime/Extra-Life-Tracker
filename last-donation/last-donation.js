@@ -23,7 +23,7 @@
 		if( ELT.settings.animate ) {
 			$trackingContainer.addClass('animate')
 				// add animation direction
-				.addClass(`animate-${ELT.settings.animationDirection}`);
+				.addClass(`animate-${ELT.settings.animateTo}`);
 		}
 
 		if (ELT.settings.showRecipient) {
