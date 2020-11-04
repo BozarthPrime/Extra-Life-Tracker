@@ -1,3 +1,9 @@
+/*
+ * 80s theme to go with the Gamer42 2020 theme
+ * 
+ * To change to this theme copy the contents of this file to style.css
+ */
+
 html {
 	font-size: 1rem;
 }
@@ -10,15 +16,18 @@ body {
 #tracking-container {
 	border: 2px solid;
 	position: relative;
-	background-color: #4074c2;
-	border-color: #ffffff;
-	color: #ffffff;
+	background-image: linear-gradient(#bf01a6, rgb(34, 38, 90));
+	border-color: rgb(44, 211, 231);
+	border-radius: 5px;
+	color: #ffffff; 
 }
 
 #header {
-	background-color: #1a4c6d;
+	background-image: linear-gradient(#bf01a6, rgb(34, 38, 90));
 	display: block;
-	font-size: 1em;
+	border-radius: 5px 5px 0px 0px;
+	border-bottom: 1px solid rgb(179, 210, 236);
+	font-size: 0.9em;
 	font-weight: bold;
 	line-height: 1em;
 	padding: 3px;

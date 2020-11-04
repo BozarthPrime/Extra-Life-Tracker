@@ -44,6 +44,12 @@ Displays an offline message and optionally plays elevator music.
 # Configuration
 Each widget has a `[widget-name]-settings.js` file in its folder (e.x. `participant-goal-settings.js`), to set up the widget just update the values in there with the correct values you would like to use. There are full descriptions of the values in the settings files for each widget.
 
+# Themes
+There are several included themes with Extra-Life-Tracker. The default theme uses the classica offical Extra Life colors but you can switch between any of them by simply copying the contents of one of the `styles-<theme name>.css`, deleting everything in `styles.css`, and replacing it with the chosen theme contents.
+
+## Making your own theme
+The easiest way to make your own theme is to just start experimenting. Open one of the widgets in a browser by dragging the HTML file into your browser window and then start making changes to `styles.css`. You can check your changes by hitting refresh in the browser. If you want to submit a theme so others can use it just make a file in the root directory named `styles-<theme name>.css` (ex. `styles-grey.css`) with the styles for your theme and open a pull request.
+
 # Setup in OBS or Streamlabs
 1. Add a new BrowserSource and give it a name (e.x. "Extra Life Tracker - Team Goal")
 2. Tick the Local File box
