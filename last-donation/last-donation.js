@@ -75,8 +75,7 @@
 			if( curDonation ){
 				const amount = curDonation.amount ? ELT.toCurrency(curDonation.amount) : ELT.settings.unknownDonationAmountText;
 				// API returns "Anonymous" as the display name instead of a null value
-				const donorName = curDonation.displayName === 'Anonymous' ? 
-					ELT.settings.unknownDonorName : curDonation.displayName;
+				const donorName = !curDonation.displayName ? ELT.settings.unknownDonorName : curDonation.displayName;
 				
 				participant = $participants[curDonation.participantID].displayName;
 				donationText = `<span class="donor-name">${donorName}</span><span class="donor-separator">:</span><span class="donor-amount">${amount}</span>`;
