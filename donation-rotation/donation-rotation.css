@@ -1,0 +1,132 @@
+#tracking-container {
+	opacity: 1;
+}
+
+#tracking-container.animate {
+	border: none;
+	padding: 0;
+	position: absolute;
+}
+
+#tracking-container.animate-left {
+	right: 0;
+	top: 0;
+}
+
+#tracking-container.animate-right {
+	left: 0;
+	top: 0;
+}
+
+#participant-name {
+	font-size: 0.7em;
+}
+
+#donation {
+	font-size: 1em;
+	font-weight: bold;
+	line-height: 1.2em;
+}
+
+.donor-separator {
+	display: inline-block;
+	margin-right: 5px;
+}
+
+.animate {
+	animation-duration: 500ms;
+	animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 1.0);
+	opacity: 0;
+	overflow: hidden;
+	padding: 0;
+	text-align: left;
+	white-space: nowrap;
+}
+
+.animate-left,
+.animate-right {
+	animation-name: slideHorzOut;
+	width: 0;
+}
+
+.animate-right {
+	text-align: right;
+}
+
+.animate .donor-separator {
+	display: none;
+}
+
+.animate #donation,
+.animate #donation .donor-name,
+.animate #donation .donor-amount {
+	display: block;
+}
+
+.animate .donor-amount {
+	font-style: italic;
+}
+
+.animate #header,
+.animate #donation,
+.animate #donation-conjunction,
+.animate #participant-name {
+	padding-left: 8px;
+	padding-right: 8px;
+	width: auto;
+}
+
+.animate #header {
+	padding: 3px 8px;
+	left: 0;
+	top: 0;
+}
+
+.animate #header,
+.animate #donation {
+	padding-top: 4px;
+}
+
+.animate #donation {
+	padding-bottom: 4px;
+}
+
+.animate #header + #donation {
+	padding-top: 3px;
+}
+
+.animate-in {
+	animation-duration: 300ms;
+	animation-timing-function: ease-in-circ;
+	opacity: 1;
+}
+
+.animate-left.animate-in,
+.animate-right.animate-in {
+	animation-name: slideHorzIn;
+	width: 400px;
+}
+
+@keyframes slideHorzIn {
+	0% {
+		width: 0;
+	}
+	70% {
+		width: 425px;
+	}
+	100% {
+		width: 400px;
+	}
+}
+
+@keyframes slideHorzOut {
+	0% {
+		width: 400px;
+	}
+	80% {
+		width: 425px;
+	}
+	100% {
+		width: 0;
+	}
+}
