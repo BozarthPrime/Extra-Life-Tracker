@@ -19,6 +19,12 @@ Displays the last donation for the specified participant or set of participants.
 
 <hr />
 
+## [Donation Rotation](widgets/donation-rotation)
+## ![Donation-Rotation-Preview](images/Last-Donation-Preview.png)
+Like Last Donation but it will continually loop through all donations recived instead of just showing the latest ones as they arrive.
+
+<hr />
+
 ## [Participant Goal](https://josephbozarth.com/Extra-Life-Tracker/widgets/participant-goal)
 ## ![Paticipant-Goal-Preview](docs/images/Participant-Goal-Preview.png)
 Displays amount raised and goal for the specified participant.
