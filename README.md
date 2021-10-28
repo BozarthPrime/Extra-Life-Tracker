@@ -3,47 +3,53 @@
 # Overview
 Extra Life Tracker is a collection of web pages that can be used as a web source in streaming software such as OBS to display your and your team's current Extra Life fund raising status and goal.
 
-More in-depth information can be found on on [project page](https://josephbozarth.com/Extra-Life-Tracker/).
+More in-depth information can be found on on [project page](https://bozarthprime.github.io/Extra-Life-Tracker/).
 
 # Widgets
 
-## [Countdown Timer](https://josephbozarth.com/Extra-Life-Tracker/widgets/countdown-timer)
+## [Countdown Timer](https://bozarthprime.github.io/Extra-Life-Tracker/widgets/countdown-timer)
 ## ![Countdonw-Timer-Preview](docs/images/Countdown-Timer-Preview.png)
 Displays the amount of time left in your event or the time left till your event starts if it is before the start of your event.
 
 <hr />
 
-## [Last Donation](https://josephbozarth.com/Extra-Life-Tracker/widgets/last-donation)
+## [Last Donation](https://bozarthprime.github.io/Extra-Life-Tracker/widgets/last-donation)
 ## ![Last-Donation-Preview](docs/images/Last-Donation-Preview.png)
 Displays the last donation for the specified participant or set of participants.
 
 <hr />
 
-## [Participant Goal](https://josephbozarth.com/Extra-Life-Tracker/widgets/participant-goal)
+## [Donation Rotation](https://bozarthprime.github.io/Extra-Life-Tracker/widgets/donation-rotation)
+## ![Donation-Rotation-Preview](docs/images/Last-Donation-Preview.png)
+Like Last Donation but it will continually loop through all donations recived instead of just showing the latest ones as they arrive.
+
+<hr />
+
+## [Participant Goal](https://bozarthprime.github.io/Extra-Life-Tracker/widgets/participant-goal)
 ## ![Paticipant-Goal-Preview](docs/images/Participant-Goal-Preview.png)
 Displays amount raised and goal for the specified participant.
 
 <hr />
 
-## [Subteam Participants](https://josephbozarth.com/Extra-Life-Tracker/widgets/subteam-participants)
+## [Subteam Participants](https://bozarthprime.github.io/Extra-Life-Tracker/widgets/subteam-participants)
 ## ![Subteam-Participants-Preview](docs/images/Subteam-Participants-Preview.png)
 Cycles through the fundraising amounts of a specified number of participants.
 
 <hr />
 
-## [Team Goal](https://josephbozarth.com/Extra-Life-Tracker/widgets/team-goal)
+## [Team Goal](https://bozarthprime.github.io/Extra-Life-Tracker/widgets/team-goal)
 ## ![Team-Goal-Preview](docs/images/Team-Goal-Preview.png)
 Displays amount raised and goal for the specified team.
 
 <hr />
 
-## [Team Last Donation](https://josephbozarth.com/Extra-Life-Tracker/widgets/team-last-donation)
+## [Team Last Donation](https://bozarthprime.github.io/Extra-Life-Tracker/widgets/team-last-donation)
 ## ![Team-Last-Donation-Preview](docs/images/Team-Last-Donation-Preview.png)
 Displays the last donation for the specified team.
 
 <hr />
 
-## [Offline Screen](https://josephbozarth.com/Extra-Life-Tracker/widgets/offline-screen)
+## [Offline Screen](https://bozarthprime.github.io/Extra-Life-Tracker/widgets/offline-screen)
 ## ![Offline-Screen-Preview](docs/images/Offline-Screen-Preview.png)
 Displays an offline message and optionally plays elevator music.
 
