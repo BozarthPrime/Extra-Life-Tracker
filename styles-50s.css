@@ -1,0 +1,61 @@
+/*
+ * 50s theme to go with the Gamer42 2021 theme
+ * 
+ * To change to this theme copy the contents of this file to style.css
+ * 
+ * Theme colors:
+ * rgb(237, 134, 93); // Orange
+ * rgb(218, 71, 39); // ROrange
+ * rgb(9, 80, 83); // Teal
+ * rgb(213, 197, 172); // Tan
+ * rgb(147, 158, 139); // Lt. Green
+ * rgb(50, 41, 38); // Midnight Brown
+ */
+
+html {
+	font-size: 1rem;
+}
+
+body {
+	font-family: "Antonio", "Anton", helvetica, arial, sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: rgb(50, 41, 38);
+	margin: 0;
+}
+
+#tracking-container {
+	border: 5px solid;
+	position: relative;
+	background-color: rgb(214, 198, 172);
+	border-color: rgb(218, 71, 39);
+	border-radius: 3px;
+	color: rgb(50, 41, 38);
+}
+
+#header {
+	background-color: rgb(214, 198, 172);
+	display: block;
+	border-radius: 5px 5px 0px 0px;
+	border-bottom: 5px solid rgb(50, 41, 38);
+	font-size: 0.9em;
+	line-height: 1em;
+	padding: 3px;
+	position: relative;
+	left: -3px;
+	top: -3px;
+	width: 100%;
+}
+
+.elt {
+	font-size: 1.4em;
+	line-height: 1.4em;
+	padding: 3px;
+	position: relative;
+	text-align: center;
+}
+
+.small-text {
+	font-size: 0.6em;
+	line-height: 0.7em;
+}
