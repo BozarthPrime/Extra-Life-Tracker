@@ -58,9 +58,9 @@ Each widget has a `[widget-name]-settings.js` file in its folder (e.x. `particip
 
 # Themes
 There are several included themes with Extra-Life-Tracker. The default theme uses the classic offical Extra Life colors but you can switch between any of them by doing the following steps:
-1. Copying the contents of one of the `styles-<theme name>.css`
-2. Deleting everything in `styles.css` in the root directory
-3. Replacing it with the chosen theme contents (paste in what you copied in step 1)
+1. Copying the contents of the `styles-<theme name>.css` you want to use (default is the standard one that is in `styles.css` to start)
+2. Paste everything into `styles.css` (located in the root directory) with what you just copied
+3. Save
 
 ## Making your own theme
 The easiest way to make your own theme is to just start experimenting. Open one of the widgets in a browser by dragging the HTML file into your browser window and then start making changes to `styles.css`. You can check your changes by hitting refresh in the browser. If you want to submit a theme so others can use it just make a file in the root directory named `styles-<theme name>.css` (ex. `styles-grey.css`) with the styles for your theme and open a pull request.
