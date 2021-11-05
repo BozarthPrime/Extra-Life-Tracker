@@ -87,6 +87,12 @@
 			$participantName.html( participant );
 			$donation.html( donationText );
 
+			if ( ELT.settings.soundList.length > 0 ) {
+				var track =  ELT.settings.soundList[Math.floor((Math.random() * ELT.settings.soundList.length))];
+				var audio = new Audio(track);
+				audio.play();
+			}
+
 			if( ELT.settings.animate ) {
 				$trackingContainer.addClass('animate-in');
 				setTimeout(() => {

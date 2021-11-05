@@ -33,6 +33,7 @@ To update the settings update their value in `last-donation-settings.js` with an
 | headerMessage | Header message to display at the top of the widget| Text | "Last Donation" |
 | showRecipient | Should the recipient of the donation be shown | Boolean | false |
 | conjunctionText | Text to use between the donation and the participant name if `showRecipient` is true | Text | "donated to" |
+| soundList | List of paths to sound files. If any are set a random one will play on every new donation. It is easiest to have just the file names in the list and to put the audio files in the last-donation directory | Array of Text | Empty array |
 | donationCycleMS | How long to display each donation before going to the next. | Integer | 10000 |
 | refreshTimeMS | How often the data should be refreshed in milliseconds | Integer | 10000 |
 
