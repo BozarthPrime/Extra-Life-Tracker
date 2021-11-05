@@ -21,6 +21,9 @@ ELT.settings = {
 	// text to use between the donation and the participant name if the
 	// recipiant is being shown
 	conjunctionText: "donated to",
+	// List of tracks to pick from to play when a new donation comes in
+	// If none are set no sound will play.
+	soundList: [],
 	// how long to display each donation before going to the next.	
 	donationCycleMS: 10000,
 	// how often should data be refreshed
