@@ -38,8 +38,8 @@
 
 		let $timeValue = "";
 
-		if ($duration.asDays() > 0) {
-			$timeValue += Math.trunc($duration.asDays()).toString().padStart(2, "0") + ":";
+		if ($duration.asDays() >= 1) {
+            $timeValue += Math.trunc($duration.asDays()).toString() + "d ";
 		}
 
 		$timeValue += $duration.hours().toString().padStart(2, "0") + ":";
