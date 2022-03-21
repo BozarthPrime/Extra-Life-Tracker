@@ -9,20 +9,20 @@ html {
 }
 
 body {
-	font-family: "Helvetica Neue", helvetica, arial, sans-serif;
+	font-family: "Gilroy", "Proxima Nova", arial, sans-serif;
 	margin: 0;
 }
 
 #tracking-container {
 	border: 2px solid;
 	position: relative;
-	background-color: #4074c2; /* Grey Theme: #9DB4C0 */
-	border-color: #ffffff;
+	background-color: #26C2EB; /* Extra Life Dark Blue */
+	border-color: #C73047; /* CMN Hospitals Red */
 	color: #ffffff;
 }
 
 #header {
-	background-color: #1a4c6d; /* Grey Theme: #465362 */
+	background-color: #1D4C6C; /* Extra Life Light Blue */
 	display: block;
 	font-size: 1em;
 	font-weight: bold;
