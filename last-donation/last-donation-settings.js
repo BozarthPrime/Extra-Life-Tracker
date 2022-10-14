@@ -28,4 +28,11 @@ ELT.settings = {
 	donationCycleMS: 10000,
 	// how often should data be refreshed
 	refreshTimeMS: 15000,
+	// Incentive Settings
+	incentives: {
+		"DABB11ED-ABBA-CABB-FEEEEEEEEEEEEEED": {
+			incentiveText: "Jelly Bean Time!",
+			incentiveSoundList: ["BeanFanfare.ogg"]
+		}
+	}
 };
