@@ -6,5 +6,5 @@ ELT.settings = {
 	// header message to display at the top of the widget
 	headerMessage: "Goal",
 	// how often should data be refreshed
-	refreshTimeMS: 10000,
+	refreshTimeMS: 15000,
 };

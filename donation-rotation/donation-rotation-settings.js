@@ -24,5 +24,5 @@ ELT.settings = {
 	// how long to display each donation before going to the next.	
 	donationCycleMS: 10000,
 	// how often should data be refreshed
-	refreshTimeMS: 10000,
+	refreshTimeMS: 15000,
 };
