@@ -5,7 +5,7 @@ do
 	read -p "User's Participant ID:" participantId
 done
 
-body=$(curl --location https://www.extra-life.org/api/participants/${participantId}/incentives)
+body=$(curl --location https://www.extra-life.org/api/1.3/participants/${participantId}/incentives)
 
 echo $body | jq 'reduce .[] as $i ({}; .[$i.incentiveID] = {incentiveText: $i.description, incentiveSoundList: []})' > incentives.json
 
