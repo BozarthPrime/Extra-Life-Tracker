@@ -36,6 +36,12 @@ To update the settings update their value in `last-donation-settings.js` with an
 | soundList | List of paths to sound files. If any are set a random one will play on every new donation. It is easiest to have just the file names in the list and to put the audio files in the last-donation directory | Array of Text | Empty array |
 | donationCycleMS | How long to display each donation before going to the next. | Integer | 10000 |
 | refreshTimeMS | How often the data should be refreshed in milliseconds | Integer | 10000 |
+| incentives | List of Incentives to treat differently than normal donations | Object | {
+        "DABB11ED-ABBA-CABB-FEEEEEEEEEEEEEED": {
+            incentiveText: "Jelly Bean Time!",
+            incentiveSoundList: ["BeanFanfare.ogg"]
+        }
+    } |
 
 ### How to get someone's Participant ID
 
@@ -44,6 +50,14 @@ To update the settings update their value in `last-donation-settings.js` with an
 3. Copy the Participant ID out of the address bar. It is the number after "participantID" and should be at the end of the address. See example image
 
 ![Get-Participant-ID](../images/where-to-find-your-id.png)
+
+### How to get the Incentives configuration (Linux or WSL)
+
+1. Execute the `fetchIncentives.sh` script
+2. Enter the Participant ID retrieved above
+3. Open the resulting `incentives.json` file and replace the `{}` in the config with the resulting text
+4. Remove incentives you do not want to treat differently from a normal donation
+5. Add sound(s) to the incentives you want sounds for, and customize the text if desired
 
 ## Setup in OBS or Streamlabs
 1. In the "Sources" section click the "+" to add a new source, selecting "BrowserSource"
