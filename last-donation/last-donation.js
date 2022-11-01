@@ -70,15 +70,30 @@
 		if ($newDonations.length > 0) {
 			let donationText;
 			let participant;
+			let soundList;
 			const curDonation = $newDonations.pop();
 
 			if( curDonation ){
-				const amount = curDonation.amount ? ELT.toCurrency(curDonation.amount) : ELT.settings.unknownDonationAmountText;
 				// API returns "Anonymous" as the display name instead of a null value
 				const donorName = !curDonation.displayName ? ELT.settings.unknownDonorName : curDonation.displayName;
 				
 				participant = $participants[curDonation.participantID].displayName;
-				donationText = `<span class="donor-name">${donorName}</span><span class="donor-separator">:</span><span class="donor-amount">${amount}</span>`;
+				
+				const incentive = ELT.settings.incentives[curDonation.incentiveID];
+				let incentiveText;
+				if ( incentive ) {
+					soundList = incentive.incentiveSoundList;
+					incentiveText = incentive.incentiveText;
+				} else {
+					soundList = ELT.settings.soundList;
+				}
+				
+				if ( incentiveText ) {
+					donationText = `<span class="donor-name">${donorName}</span><span class="donor-separator">:</span><span class="donor-amount">${incentiveText}</span>`;
+				} else {
+					const amount = curDonation.amount ? ELT.toCurrency(curDonation.amount) : ELT.settings.unknownDonationAmountText;
+					donationText = `<span class="donor-name">${donorName}</span><span class="donor-separator">:</span><span class="donor-amount">${amount}</span>`;
+				}
 			} else {
 				participant = ' ';
 				donationText = 'No donations';
@@ -87,8 +102,8 @@
 			$participantName.html( participant );
 			$donation.html( donationText );
 
-			if ( ELT.settings.soundList.length > 0 ) {
-				var track =  ELT.settings.soundList[Math.floor((Math.random() * ELT.settings.soundList.length))];
+			if ( soundList.length > 0 ) {
+				var track =  soundList[Math.floor((Math.random() * soundList.length))];
 				var audio = new Audio(track);
 				audio.play();
 			}
