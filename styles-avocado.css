@@ -1,0 +1,57 @@
+/*
+ * GamePlan 2022 theme
+ * 
+ * To change to this theme copy the contents of this file to style.css
+ * 
+ * Theme colors:
+ * #6f741c; // Light Green
+ * #4a4f22; // Avocado Green
+ * #d99d22; // Harvest Gold
+ * #85620f; // Dark Gold
+ * #a24223; // Dusky Red
+ * #314556; // Dark Teal
+ * #e6dbcd; // Cream
+ */
+
+html {
+	font-size: 1rem;
+}
+
+body {
+	font-family: "Antonio", "Anton", helvetica, arial, sans-serif;
+	margin: 0;
+}
+
+#tracking-container {
+	border: 2px solid;
+	position: relative;
+	background-color: #e6dbcd;
+	border-color: #314556;
+	color: #a24223;
+}
+
+#header {
+	background-color: #314556;
+	display: block;
+	font-size: 1em;
+	font-weight: bold;
+	line-height: 1em;
+	padding: 3px;
+	position: relative;
+	left: -3px;
+	top: -3px;
+	width: 100%;
+}
+
+.elt {
+	font-size: 1.4em;
+	line-height: 1.4em;
+	padding: 3px;
+	position: relative;
+	text-align: center;
+}
+
+.small-text {
+	font-size: 0.6em;
+	line-height: 0.7em;
+}
