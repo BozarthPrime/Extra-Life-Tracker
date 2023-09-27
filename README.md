@@ -1,9 +1,9 @@
 # ![Extra-Life-Tracker-Header](docs/images/Extra-Life-Traker-Header.png)
 
 # Overview
-Extra Life Tracker is a collection of web pages that can be used as a web source in streaming software such as OBS to display your and your team's current Extra Life fund raising status and goal.
+Extra Life Tracker is a collection of web pages that can be used as a web source in streaming software such as OBS to display your and your team's current Extra Life fundraising status and goal.
 
-More in-depth information can be found on on [project page](https://bozarthprime.github.io/Extra-Life-Tracker/).
+More in-depth information can be found on the [project page](https://bozarthprime.github.io/Extra-Life-Tracker/).
 
 # Widgets
 
@@ -21,7 +21,7 @@ Displays the last donation for the specified participant or set of participants.
 
 ## [Donation Rotation](https://bozarthprime.github.io/Extra-Life-Tracker/widgets/donation-rotation)
 ## ![Donation-Rotation-Preview](docs/images/Last-Donation-Preview.png)
-Like Last Donation but it will continually loop through all donations recived instead of just showing the latest ones as they arrive.
+Like Last Donation, but it will continually loop through all donations recived instead of just showing the latest ones as they arrive.
 
 <hr />
 
@@ -54,7 +54,7 @@ Displays the last donation for the specified team.
 Displays an offline message and optionally plays elevator music.
 
 # Configuration
-Each widget has a `[widget-name]-settings.js` file in its folder (e.x. `participant-goal-settings.js`), to set up the widget just update the values in there with the correct values you would like to use. There are full descriptions of the values in the settings files for each widget.
+Each widget has a `[widget-name]-settings.js` file in its folder (e.x. `participant-goal-settings.js`), to set up each widget just update the values in its settings file with the correct values you would like to use. There are full descriptions of the values in the settings files for each widget.
 
 # Themes
 There are several included themes with Extra-Life-Tracker. The default theme uses the classic offical Extra Life colors but you can switch between any of them by doing the following steps:
@@ -69,7 +69,7 @@ The easiest way to make your own theme is to just start experimenting. Open one 
 1. Add a new BrowserSource and give it a name (e.x. "Extra Life Tracker - Team Goal")
 2. Tick the Local File box
 3. Click the browse button next to the Local File line and select the html file of the widget you want to add
-4. Set the width to whatever your desired width is (300 is a goo starting point). The list will automatically adjust to the defined width
+4. Set the width to whatever your desired width is (300 is a good starting point). The list will automatically adjust to the defined width
 5. Set the height according the what widget you are adding
 	- Countdown Timer: 69
 	- Last Donation: 41 (+28 with header, +35 with recipiant)
