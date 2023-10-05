@@ -1,7 +1,7 @@
 # The Widgets
 
 ## [Countdown Timer](widgets/countdown-timer)
-## ![Countdonw-Timer-Preview](images/Countdown-Timer-Preview.png)
+## ![Countdown-Timer-Preview](images/Countdown-Timer-Preview.png)
 Displays the amount of time left in your event or the time left till your event starts if it is before the start of your event.
 
 <hr />
