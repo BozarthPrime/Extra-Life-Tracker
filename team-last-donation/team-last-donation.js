@@ -5,7 +5,7 @@
 
     var $participants = {};
     var $newDonations = [];
-    var donationsSeen = 0;
+    var lastDonationDate = new Date();
     var itemsToAdd = 1;
 	// Structure placeholders
     const $donation = $('#donation');
@@ -50,15 +50,19 @@
 
     /* Main loop */
     function checkForNewDonations() {
-        ELT.api.teamDonations(ELT.settings.teamId, checkForNewDonationsOnSuccess);
+        ELT.api.teamDonationsAfterDate(
+            ELT.settings.teamId, 
+            lastDonationDate, 
+            checkForNewDonationsOnSuccess
+        );
     }
 
     function checkForNewDonationsOnSuccess(results) {
-        if (results.length > donationsSeen) {
-            const newItems = results.slice(0, results.length - donationsSeen);
-
-            $newDonations = $newDonations.concat(newItems);
-            donationsSeen = results.length;
+        if (results.length > 0) {
+            $newDonations = $newDonations.concat(results);
+            lastDonationDate = new Date(results[0].createdDateUTC);
+        } else {
+            console.log("No new donations");
         }
     }
 
