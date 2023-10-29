@@ -35,7 +35,7 @@
 
         ELT.settings.participantIds.forEach(function (participantId) {
             ELT.api.participant(participantId, function (result) {
-                result['lastDonationDate'] = new Date("2023-10-25");
+                result['lastDonationDate'] = new Date();
                 $participants[result.participantID] = result;
             });
         });

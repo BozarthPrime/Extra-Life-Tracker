@@ -5,7 +5,7 @@
 
     var $participants = {};
     var $newDonations = [];
-    var lastDonationDate = new Date("2023-10-25");
+    var lastDonationDate = new Date();
     var itemsToAdd = 1;
 	// Structure placeholders
     const $donation = $('#donation');
