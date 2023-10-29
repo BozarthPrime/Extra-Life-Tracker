@@ -23,6 +23,34 @@ function createApiActionFor(fuseaction){
 	};
 }
 
+function createDateApiActionFor(fuseaction){
+	return function(data, callDate, callback) {
+		let timestamp = {
+			timestamp: new Date().getTime()
+		};
+
+		let callURL = baseURL + fuseaction.replace("{}", data);
+		callURL = callURL.replace("[]", 
+			callDate.getUTCFullYear() + 
+			"-" + (callDate.getUTCMonth() + 1) + 
+			"-" + callDate.getUTCDate() +
+			"T" + callDate.getUTCHours() +
+			":" + callDate.getUTCMinutes() +
+			":" + callDate.getUTCSeconds() +
+			"." + callDate.getUTCMilliseconds());
+		
+		$.ajax({
+			type: 'GET',
+			url: callURL,
+			timestamp,
+			success: callback,
+			error: function() {
+				callback({});
+			}
+		});
+	};
+}
+
 window.ELT = {
 	isEmpty: function(value) {
 		return (value == null || value === "");
@@ -34,9 +62,9 @@ window.ELT = {
 
 	api: {
 		participant: createApiActionFor('participants/{}'),
-		participantDonations: createApiActionFor('participants/{}/donations'),
+		participantDonations: createDateApiActionFor('participants/{}/donations?where=createdDateUTC>[]'),
 		team: createApiActionFor('teams/{}'),
 		teamParticipants: createApiActionFor('teams/{}/participants'),
-		teamDonations: createApiActionFor('teams/{}/donations'),
+		teamDonations: createDateApiActionFor('teams/{}/donations?where=createdDateUTC>[]'),
 	},
 };
