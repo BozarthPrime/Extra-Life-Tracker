@@ -1,3 +1,30 @@
 #tracking-container {
 	opacity: 1;
 }
+
+#progress-bar {
+	position: relative;
+	height: 10px;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	opacity: 100%;
+	margin-top: 5px;
+}
+
+/*The outer container of the progressbar*/
+.ui-progressbar {
+	background-color: #EFEFEF !important;
+	opacity: 90% !important;
+	border: none !important;
+} 
+
+/*The element that represents the filled portion of the progressbar*/
+.ui-progressbar-value {
+	background: #CCCCCC !important;
+	border-right: none !important;
+}
+
+/*Overlay used to display an animation for indeterminate progressbars*/
+.ui-progressbar-overlay {
+}
