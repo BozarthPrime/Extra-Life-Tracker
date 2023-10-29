@@ -30,14 +30,7 @@ function createDateApiActionFor(fuseaction){
 		};
 
 		let callURL = baseURL + fuseaction.replace("{}", data);
-		callURL = callURL.replace("[]", 
-			callDate.getUTCFullYear() + 
-			"-" + (callDate.getUTCMonth() + 1) + 
-			"-" + callDate.getUTCDate() +
-			"T" + callDate.getUTCHours() +
-			":" + callDate.getUTCMinutes() +
-			":" + callDate.getUTCSeconds() +
-			"." + callDate.getUTCMilliseconds());
+		callURL = callURL.replace("[]", callDate.toISOString());
 		
 		$.ajax({
 			type: 'GET',
