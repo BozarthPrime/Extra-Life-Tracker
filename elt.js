@@ -62,9 +62,11 @@ window.ELT = {
 
 	api: {
 		participant: createApiActionFor('participants/{}'),
-		participantDonations: createDateApiActionFor('participants/{}/donations?where=createdDateUTC>[]'),
+		participantDonations: createApiActionFor('participants/{}/donations'),
+		participantDonationsAfterDate: createDateApiActionFor('participants/{}/donations?where=createdDateUTC>[]'),
 		team: createApiActionFor('teams/{}'),
 		teamParticipants: createApiActionFor('teams/{}/participants'),
-		teamDonations: createDateApiActionFor('teams/{}/donations?where=createdDateUTC>[]'),
+		teamDonations: createDateApiActionFor('teams/{}/donations'),
+		teamDonationsAfterDate: createDateApiActionFor('teams/{}/donations?where=createdDateUTC>[]'),
 	},
 };

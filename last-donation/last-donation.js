@@ -52,9 +52,11 @@
             const curParticipant = $participants[participantId];
 
             if (typeof curParticipant !== 'undefined') {
-                ELT.api.participantDonations(participantId, 
-                                         curParticipant.lastDonationDate, 
-                                         checkForNewDonationsOnSuccess);
+                ELT.api.participantDonationsAfterDate(
+                    participantId, 
+                    curParticipant.lastDonationDate, 
+                    checkForNewDonationsOnSuccess
+                );
             }
         });
     }

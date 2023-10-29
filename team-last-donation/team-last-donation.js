@@ -50,7 +50,11 @@
 
     /* Main loop */
     function checkForNewDonations() {
-        ELT.api.teamDonations(ELT.settings.teamId, lastDonationDate, checkForNewDonationsOnSuccess);
+        ELT.api.teamDonationsAfterDate(
+            ELT.settings.teamId, 
+            lastDonationDate, 
+            checkForNewDonationsOnSuccess
+        );
     }
 
     function checkForNewDonationsOnSuccess(results) {
