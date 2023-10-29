@@ -14,7 +14,6 @@
 
     /* Initial setup of the layout and theme based on user settings */
     function start() {
-
         if (ELT.settings.showHeader) {
             $header.html(ELT.settings.headerMessage);
         } else {
@@ -36,7 +35,7 @@
 
         ELT.settings.participantIds.forEach(function (participantId) {
             ELT.api.participant(participantId, function (result) {
-                result['donationsSeen'] = 0;
+                result['lastDonationDate'] = new Date();
                 $participants[result.participantID] = result;
             });
         });
@@ -50,20 +49,30 @@
     /* Main loop */
     function checkForNewDonations() {
         ELT.settings.participantIds.forEach(function (participantId) {
-            ELT.api.participantDonations(participantId, checkForNewDonationsOnSuccess);
+            const curParticipant = $participants[participantId];
+
+            if (typeof curParticipant !== 'undefined') {
+                ELT.api.participantDonationsAfterDate(
+                    participantId, 
+                    curParticipant.lastDonationDate, 
+                    checkForNewDonationsOnSuccess
+                );
+            }
         });
     }
 
     function checkForNewDonationsOnSuccess(results) {
         if (results.length > 0) {
             const curParticipant = $participants[results[0].participantID];
+            console.log(curParticipant.lastDonationDate);
 
-            if (curParticipant != null && results.length > curParticipant.donationsSeen) {
-                const newItems = results.slice(0, results.length - curParticipant.donationsSeen);
+            if (curParticipant != null) {
+                curParticipant.lastDonationDate = new Date(results[0].createdDateUTC);
 
-                $newDonations = $newDonations.concat(newItems);
-                curParticipant.donationsSeen = results.length;
+                $newDonations = $newDonations.concat(results);
             }
+        } else {
+            console.log("no new donations");
         }
     }
 
@@ -81,6 +90,7 @@
 
                 const incentive = ELT.settings.incentives[curDonation.incentiveID];
                 let incentiveText;
+
                 if (incentive) {
                     soundList = incentive.incentiveSoundList;
                     incentiveText = incentive.incentiveText;

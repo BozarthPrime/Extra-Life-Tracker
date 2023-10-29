@@ -23,6 +23,27 @@ function createApiActionFor(fuseaction){
 	};
 }
 
+function createDateApiActionFor(fuseaction){
+	return function(data, callDate, callback) {
+		let timestamp = {
+			timestamp: new Date().getTime()
+		};
+
+		let callURL = baseURL + fuseaction.replace("{}", data);
+		callURL = callURL.replace("[]", callDate.toISOString());
+		
+		$.ajax({
+			type: 'GET',
+			url: callURL,
+			timestamp,
+			success: callback,
+			error: function() {
+				callback({});
+			}
+		});
+	};
+}
+
 window.ELT = {
 	isEmpty: function(value) {
 		return (value == null || value === "");
@@ -35,9 +56,11 @@ window.ELT = {
 	api: {
 		participant: createApiActionFor('participants/{}'),
 		participantDonations: createApiActionFor('participants/{}/donations'),
+		participantDonationsAfterDate: createDateApiActionFor('participants/{}/donations?where=createdDateUTC>[]'),
 		participantIncentives: createApiActionFor('1.3/participants/{}/incentives'),
 		team: createApiActionFor('teams/{}'),
 		teamParticipants: createApiActionFor('teams/{}/participants'),
-		teamDonations: createApiActionFor('teams/{}/donations'),
+		teamDonations: createDateApiActionFor('teams/{}/donations'),
+		teamDonationsAfterDate: createDateApiActionFor('teams/{}/donations?where=createdDateUTC>[]'),
 	},
 };
