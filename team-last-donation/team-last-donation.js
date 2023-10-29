@@ -55,10 +55,15 @@
 
     function checkForNewDonationsOnSuccess(results) {
         if (results.length > donationsSeen) {
-            const newItems = results.slice(0, results.length - donationsSeen);
+            if (donationsSeen == 0) {
+                // Trim items if this is the first loop
+                donationsSeen = results.length;
+            } else {
+                const newItems = results.slice(0, results.length - donationsSeen);
 
-            $newDonations = $newDonations.concat(newItems);
-            donationsSeen = results.length;
+                $newDonations = $newDonations.concat(newItems);
+                donationsSeen = results.length;
+            }   
         }
     }
 

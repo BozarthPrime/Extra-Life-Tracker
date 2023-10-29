@@ -59,10 +59,16 @@
             const curParticipant = $participants[results[0].participantID];
 
             if (curParticipant != null && results.length > curParticipant.donationsSeen) {
-                const newItems = results.slice(0, results.length - curParticipant.donationsSeen);
+                if (curParticipant.donationsSeen == 0) {
+                    // Trim items if this is the first loop
+                    curParticipant.donationsSeen = results.length;
+                } else {
+                    // Add new items to be displayed
+                    const newItems = results.slice(0, results.length - curParticipant.donationsSeen);
 
-                $newDonations = $newDonations.concat(newItems);
-                curParticipant.donationsSeen = results.length;
+                    $newDonations = $newDonations.concat(newItems);
+                    curParticipant.donationsSeen = results.length;
+                }
             }
         }
     }
@@ -81,6 +87,7 @@
 
                 const incentive = ELT.settings.incentives[curDonation.incentiveID];
                 let incentiveText;
+
                 if (incentive) {
                     soundList = incentive.incentiveSoundList;
                     incentiveText = incentive.incentiveText;
