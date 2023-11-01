@@ -25,7 +25,7 @@ To update the settings update their value in `last-donation-settings.js` with an
 |---|---|---|---|
 | animate | Animate the last donation instead of persist on screen | Boolean | false |
 | animationPauseMS | Duration that the last donation message is displayed in milliseconds. Only used if animate is true | Integer | 5000 |
-| animationDirection | Direction of animation. Only used if animate is true | "left" \| "right" | "left" |
+| animationDirection | Direction of animation. Only used if animate is true | "left" | "right" | "left" |
 | participantIds | Extra Life participant IDs | Array of Text | Empty array |
 | unknownDonorName | Donor name to show if the donor name is null | Text | "Mysterious Hero" |
 | unknownDonationAmountText | Text to display when donor has elected to only show the amount to the participant | Text | "Private Donation" |
