@@ -37,11 +37,20 @@
             ELT.api.participant(participantId, function (result) {
                 result['lastDonationDate'] = new Date();
                 $participants[result.participantID] = result;
+
+                ELT.api.participantDonations(
+                    result.participantID, 
+                    function (results) {
+                        console.log(results);
+                        if (results.length > 0) {
+                            checkForNewDonationsOnSuccess(results.slice(0,1));
+                            updateDonation();
+                        }
+                    }
+                );
             });
         });
 
-        checkForNewDonations();
-        updateDonation();
         setInterval(checkForNewDonations, ELT.settings.refreshTimeMS);
         setInterval(updateDonation, ELT.settings.donationCycleMS);
     }
@@ -64,7 +73,6 @@
     function checkForNewDonationsOnSuccess(results) {
         if (results.length > 0) {
             const curParticipant = $participants[results[0].participantID];
-            console.log(curParticipant.lastDonationDate);
 
             if (curParticipant != null) {
                 curParticipant.lastDonationDate = new Date(results[0].createdDateUTC);

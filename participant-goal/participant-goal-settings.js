@@ -8,5 +8,5 @@ ELT.settings = {
 	// how often should data be refreshed
 	refreshTimeMS: 15000,
 	// Have the progress bar
-	progressBar: true
+	progressBar: false
 };

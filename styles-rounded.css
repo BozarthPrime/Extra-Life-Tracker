@@ -1,10 +1,16 @@
+/*
+ * Default rounded theme
+ * 
+ * To change to this theme copy the contents of this file to style.css
+ */
+
 html {
 	font-size: 1rem;
 }
 
 body {
 	font-family: "Gilroy", "Proxima Nova", arial, sans-serif;
-	margin: 10px;
+	margin: 0;
 }
 
 #tracking-container {
@@ -13,11 +19,9 @@ body {
 	background-color: #26C2EB; /* Extra Life Dark Blue */
 	border: none;
 	color: #ffffff;
-	border-radius: 15px;
 }
 
 #header {
-	border-radius: 15px 15px 0 0;
 	background-color: #1D4C6C; /* Extra Life Light Blue */
 	display: block;
 	font-size: 1em;

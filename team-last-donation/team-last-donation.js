@@ -23,12 +23,6 @@
             $header.remove();
         }
 
-        if (ELT.settings.animate) {
-            $trackingContainer.addClass('animate')
-            // add animation direction
-            .addClass(`animate-${ELT.settings.animateTo}`);
-        }
-
         if (ELT.settings.showRecipient) {
             $donationConjunction.html(ELT.settings.conjunctionText);
         } else {
@@ -42,8 +36,26 @@
             });
         });
 
-        checkForNewDonations();
-        updateDonation();
+        if (ELT.settings.animate) {
+            $trackingContainer.addClass('animate')
+            // add animation direction
+            .addClass(`animate-${ELT.settings.animateTo}`);
+        } else {
+            // If we are not animating we should get the most recent donation
+            // to display
+            ELT.api.teamDonations(
+                ELT.settings.teamId, 
+                function (results) {
+                    if (results.length > 0) {
+                        $newDonations = $newDonations.concat(results[0]);
+                        lastDonationDate = new Date(results[0].createdDateUTC);
+                    }
+
+                    updateDonation();
+                }
+            );
+        }
+
         setInterval(checkForNewDonations, ELT.settings.refreshTimeMS);
         setInterval(updateDonation, ELT.settings.donationCycleMS);
     }
