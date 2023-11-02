@@ -57,6 +57,7 @@ window.ELT = {
 		participant: createApiActionFor('participants/{}'),
 		participantDonations: createApiActionFor('participants/{}/donations'),
 		participantDonationsAfterDate: createDateApiActionFor('participants/{}/donations?where=createdDateUTC>[]'),
+		participantIncentives: createApiActionFor('1.3/participants/{}/incentives'),
 		team: createApiActionFor('teams/{}'),
 		teamParticipants: createApiActionFor('teams/{}/participants'),
 		teamDonations: createDateApiActionFor('teams/{}/donations'),
