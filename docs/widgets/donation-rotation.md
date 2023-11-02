@@ -4,7 +4,7 @@ Displays the name of the each donator and amount they donated to a specified par
 
 ### Static
 
-![Donation Rotation](../images/Last-Donation-Preview.png)
+![Donation Rotation](../images/Donation-Rotation-Preview.png)
 
 ### Animated with header
 

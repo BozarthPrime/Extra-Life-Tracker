@@ -6,15 +6,15 @@ ELT.settings = {
 	// direction of animation
 	animateTo: 'left',
 	// get donation information for these participants
-	participantIds: [], 
+	participantIds: ["523738"], 
 	// name to show if the donor name is null
 	unknownDonorName: "Mysterious Hero",
 	// Message displayed when donation amount it private to the donatee
 	unknownDonationAmountText: "Private Donation",
 	// if the header message should be shown
-	showHeader: false,
+	showHeader: true,
 	// header message to display at the top of the widget
-	headerMessage: "Last Donation",
+	headerMessage: "New Donation!",
 	// if the recipiant of the donation should be shown. This is meant
 	// for when you have more than one participantID
 	showRecipient: false,

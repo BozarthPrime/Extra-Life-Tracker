@@ -38,11 +38,12 @@
 			ELT.api.participant(participantId, function(result) {
 				result['donationsSeen'] = 0;
 				$participants[result.participantID] = result;
+
+				checkForNewDonations();
+				updateDonation();
 			});
 		});
 
-		checkForNewDonations();
-		updateDonation();
 		setInterval(checkForNewDonations, ELT.settings.refreshTimeMS);
 		setInterval(updateDonation, ELT.settings.donationCycleMS); 
 	}	

@@ -13,6 +13,10 @@
 			header.hide();
 		}
 
+		if (!ELT.settings.progressBar) {
+			$('#progress-bar').hide();
+		}
+
 		update();
 		setInterval(update, ELT.settings.refreshTimeMS);
 	}
@@ -27,6 +31,14 @@
 		const $goal = $('#goal');
 		$raised.html(ELT.toCurrency(result.sumDonations));
 		$goal.html(ELT.toCurrency(result.fundraisingGoal));
+
+		if (ELT.settings.progressBar) {
+			const $progress = Math.min(100, (result.sumDonations/result.fundraisingGoal) * 100)
+
+			$('#progress-bar').progressbar({
+				value: $progress
+			});
+		}
 	}
 
 	start();

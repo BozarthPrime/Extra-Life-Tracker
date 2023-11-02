@@ -36,12 +36,7 @@ To update the settings update their value in `last-donation-settings.js` with an
 | soundList | List of paths to sound files. If any are set a random one will play on every new donation. It is easiest to have just the file names in the list and to put the audio files in the last-donation directory | Array of Text | Empty array |
 | donationCycleMS | How long to display each donation before going to the next. | Integer | 10000 |
 | refreshTimeMS | How often the data should be refreshed in milliseconds | Integer | 10000 |
-| incentives | List of Incentives to treat differently than normal donations | Object | {
-        "DABB11ED-ABBA-CABB-FEEEEEEEEEEEEEED": {
-            incentiveText: "Jelly Bean Time!",
-            incentiveSoundList: ["BeanFanfare.ogg"]
-        }
-    } |
+| incentives | List of Incentives to treat differently than normal donations | Object |  |
 
 ### How to get someone's Participant ID
 

@@ -13,6 +13,7 @@ To update the settings update their value in `participant-goal-settings.js` with
 | showHeader | If the header message should be shown | Boolean | false |
 | headerMessage | Header message to display at the top of the widget| Text | "Last Donation" |
 | refreshTimeMS | How often the data should be refreshed in milliseconds | Integer | 10000 |
+| progressBar | If a progress bar should be shown under the goal | Boolean | false |
 
 ### How to get your Participant ID
 
@@ -32,5 +33,5 @@ To update the settings update their value in `participant-goal-settings.js` with
 6. Check "Local file"
 7. Click "Browse" next to the "Local file" line and select `participant-goal.html`
 8. Set "Width" to at least 300 (the widget will fill the whole width given)
-9. Set "Height" to 41 (+28 with header)
+9. Set "Height" to 41 (+28 with header, +15 with progress bar)
 10. Click "OK" to finish the setup
