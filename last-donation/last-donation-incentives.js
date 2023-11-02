@@ -4,20 +4,21 @@
      **********/
 
     var $participants = {};
-    const $incentives = $('#incentives');
-    const $configOutput = $('#configOutput');
+    const $incentivesHeader = $('#incentivesHeader');
+    const $incentivesBody = $('#incentivesBody');
+    const $incentivesFooter = $('#incentivesFooter');
 
+    $incentivesHeader.html("incentives: {<br/>")
+    $incentivesFooter.html("}");
     ELT.settings.participantIds.forEach(function (participantId) {
         ELT.api.participantIncentives(participantId, function (result) {
             console.log(result);
-            $incentives.html("incentives: {<br/>")
             result.forEach(function (incentive) {
-                $incentives.append("    \"" + incentive.incentiveID + "\": {<br/>"
+                $incentivesBody.append("    \"" + incentive.incentiveID + "\": {<br/>"
                      + "        \"incentiveText\": \"" + incentive.description + "\",<br/>"
                      + "        \"incentiveSoundList\": [\"ExampleSound.ogg\"]<br/>"
                      + "    },<br/>")
             });
-            incentives.append("}");
         });
     });
 
