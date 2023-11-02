@@ -46,13 +46,30 @@ To update the settings update their value in `last-donation-settings.js` with an
 
 ![Get-Participant-ID](../images/where-to-find-your-id.png)
 
-### How to get the Incentives configuration (Linux or WSL)
+### How to configure custom messages and sounds for Incentives
 
-1. Execute the `fetchIncentives.sh` script
-2. Enter the Participant ID retrieved above
-3. Open the resulting `incentives.json` file and replace the `{}` in the config with the resulting text
-4. Remove incentives you do not want to treat differently from a normal donation
-5. Add sound(s) to the incentives you want sounds for, and customize the text if desired
+1. Enter the Participant ID(s) into the `last-donation-settings.js` file
+2. Open the `incentive-config.html` file in your web browser
+3. Copy the text from the page and replace the `incentives: {}` line in the `last-donation-settings.js` file with the block displayed
+	```
+	⚠ Everything from "incentives: {" through the "}" on a line by itself at the bottom
+	```
+4. Remove incentives you do not want to treat differently from a normal donation (All 4 lines in the following example.)
+	```
+	"C37CACA4-0CFB-D042-B9A1543222BA4943": {
+		"incentiveText": "Widget Test Incentive 1",
+		"incentiveSoundList": ["ExampleSound.ogg"]
+	},
+	```
+5. Add sound(s) to the incentives you want sounds for ("ExampleSound.ogg" is a placeholder), and customize the text if desired
+
+Here is an example of an incentive with custom text and a list of sounds to choose from randomly:
+	```
+	"C37CACA4-0CFB-D042-B9A1543222BA4943": {
+		"incentiveText": "Do a Little Dance!",
+		"incentiveSoundList": ["ExampleSound.ogg", "Fanfare.wav", "Towel.mp3"]
+	},
+	```
 
 ## Setup in OBS or Streamlabs
 1. In the "Sources" section click the "+" to add a new source, selecting "BrowserSource"
