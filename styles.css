@@ -1,24 +1,44 @@
+/*
+ * Default theme with standard CMN/Extra Life colors
+ *
+ * CMN Brand Guidelines as of January, 2026
+ * https://brandcenter.cmn.org/
+ * 
+ * Colors:
+ * CMN Blue: #0E7CA2
+ * CMN Yellow: #FFCB05
+ * CMN Dark Gray: #253746
+ * White: #FFFFFF
+ * CMN Light Blue: #1C9ED6
+ * 
+ * Fonts:
+ * Gilroy or Open Sans for headers
+ * Proxima Nova for body copy
+ * Arial as a fallback
+ * 
+ * To change to this theme copy the contents of this file to style.css
+ */
+
 html {
 	font-size: 1rem;
 }
 
 body {
-	font-family: "Gilroy", "Proxima Nova", arial, sans-serif;
-	margin: 10px;
+	font-family: "Gilroy", "Open Sans", "Proxima Nova", arial, sans-serif;
+	margin: 0;
 }
 
 #tracking-container {
 	border: 2px solid;
 	position: relative;
-	background-color: #26C2EB; /* Extra Life Dark Blue */
-	border: none;
-	color: #ffffff;
-	border-radius: 15px;
+	background-color: #FFCB05; /* CMN Yellow */
+	border-color: #253746; /* CMN Dark Gray	*/
+	color: #253746; /* CMN Dark Gray	*/
 }
 
 #header {
-	border-radius: 15px 15px 0 0;
-	background-color: #1D4C6C; /* Extra Life Light Blue */
+	background-color: #0E7CA2; /* CMN Dark Blue */
+	color: #FFFFFF;
 	display: block;
 	font-size: 1em;
 	font-weight: bold;
