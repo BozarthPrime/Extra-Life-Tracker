@@ -1,6 +1,6 @@
 ELT.settings = {
 	// array of participants to get data for
-	participantIds: ["523738", "508530"],
+	participantIds: ["565156", "568045"],
 	// number of participants to display at once.
 	// If the number of participants is larger than the
 	// number displayed participants will be cycled
