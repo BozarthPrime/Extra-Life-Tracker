@@ -42,7 +42,7 @@ To update the settings update their value in `last-donation-settings.js` with an
 
 1. Go to [extra-life.org](https://www.extra-life.org/)
 2. Navigate to the person's participant fundraising page
-3. Copy the Participant ID out of the address bar. It is the number after "participantID" and should be at the end of the address. See example image
+3. Copy the Participant ID out of the address bar. It is either the name after `/participants/` or the number after "participantID" and should be at the end of the address. See example image
 
 ![Get-Participant-ID](../images/where-to-find-your-id.png)
 
