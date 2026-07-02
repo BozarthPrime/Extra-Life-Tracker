@@ -20,7 +20,7 @@ To update the settings update their value in `participant-goal-settings.js` with
 1. Go to [extra-life.org](https://www.extra-life.org/)
 2. Log in to your 
 3. Click "Your Page" in the top bar of the page
-4. Copy the Participant ID out of the address bar. It is the number after "participantID" and should be at the end of the address. See example image
+4. Copy the Participant ID out of the address bar. It is either the name after `/participants/` or the number after "participantID" and should be at the end of the address. See example image
 
 ![Get-Participant-ID](../images/where-to-find-your-id.png)
 
