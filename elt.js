@@ -3,7 +3,7 @@ const currencyOptions = {
 	precision: 2,
 	separator: ',',
 };
-const baseURL = "https://www.extra-life.org/api/";
+const baseURL = "https://dd.extra-life.org/api/";
 
 function createApiActionFor(fuseaction){
 	return function(data, callback) {
@@ -60,7 +60,7 @@ window.ELT = {
 		participantIncentives: createApiActionFor('1.3/participants/{}/incentives'),
 		team: createApiActionFor('teams/{}'),
 		teamParticipants: createApiActionFor('teams/{}/participants'),
-		teamDonations: createDateApiActionFor('teams/{}/donations'),
+		teamDonations: createApiActionFor('teams/{}/donations'),
 		teamDonationsAfterDate: createDateApiActionFor('teams/{}/donations?where=createdDateUTC>[]'),
 	},
 };
