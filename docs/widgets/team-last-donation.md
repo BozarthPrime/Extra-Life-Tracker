@@ -22,7 +22,7 @@ To update the settings update their value in `team-last-donation-settings.js` wi
 1. Go to [extra-life.org](https://www.extra-life.org/)
 2. Log in to your 
 3. Click "Team Page" in the top bar of the page
-4. Copy the Team ID out of the address bar. It is the number after "teamID" and should be at the end of the address. See example image
+4. Copy the Team ID out of the address bar. It is either the name after `/teams/` or the number after "teamID" and should be at the end of the address. See example image
 
 ![Get-Team-ID](../images/where-to-find-team-id.png)
 
